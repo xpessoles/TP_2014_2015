@@ -1,0 +1,46 @@
+//Design Name: pas_pas_complet
+//START
+
+//DESTINATION NODES
+GLB_S3_QB.D0 [reg]
+GLB_S3_QB.CLK [reg]
+GLB_S0_PIN.D0 [reg]
+GLB_S0_PIN.CLK [reg]
+GLB_S1_PIN.D0 [reg]
+GLB_S1_PIN.CLK [reg]
+GLB_N_18.D0 [reg]
+GLB_N_18.CLK [reg]
+GLB_S2_PIN.D0 [reg]
+GLB_S2_PIN.CLK [reg]
+GLB_N_44.D0 [reg]
+GLB_N_44.CLK [reg]
+GLB_N_45.D0 [reg]
+GLB_N_45.CLK [reg]
+S1 [out]
+S2 [out]
+S3 [out]
+LPH1 [out]
+LPH2 [out]
+LPH3 [out]
+LPH4 [out]
+PH1 [out]
+PH2 [out]
+PH3 [out]
+PH4 [out]
+S0 [out]
+
+//SOURCE NODES;
+
+SENS [in]
+H [in]
+SET [in]
+XRESET [in]
+GLB_N_45.Q0 [reg]
+GLB_N_44.Q0 [reg]
+GLB_S2_PIN.Q0 [reg]
+GLB_N_18.Q0 [reg]
+GLB_S1_PIN.Q0 [reg]
+GLB_S0_PIN.Q0 [reg]
+GLB_S3_QB.Q0 [reg]
+
+//END

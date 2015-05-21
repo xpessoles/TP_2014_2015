@@ -1,0 +1,13 @@
+#$ TOOL ispLEVER Classic 1.8.00.04.29.14
+#$ DATE Wed May 20 11:05:34 2015
+#$ TITLE testled.bls 
+#$ MODULE testled
+#$ PINS 2 SW1 LED1'o' 
+
+.model testled
+.inputs SW1.BLIF
+.outputs LED1
+.names SW1.BLIF LED1
+1 1
+0 0
+.end

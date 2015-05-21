@@ -1,0 +1,11 @@
+//Design Name: decouverteisp
+//START
+
+//DESTINATION NODES
+LED1 [out]
+
+//SOURCE NODES;
+
+SW1 [in]
+
+//END

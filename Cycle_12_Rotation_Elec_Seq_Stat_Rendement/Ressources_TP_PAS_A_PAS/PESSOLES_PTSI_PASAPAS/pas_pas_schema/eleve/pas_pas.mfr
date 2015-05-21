@@ -1,0 +1,76 @@
+Frequency Analysis Report:
+-------------------------
+
+Design Name: PAS_PAS
+Part Name: ispLSI1016-60LH44/883
+
+This report contains the maximum frequency at which the design
+can be operated. It also lists the path that determines the
+maximum frequency and the number of GLB levels. 
+The remaining internal register paths and their frequencies
+are also listed, if the source and the registers are driven
+by the same reference clock.
+
+
+Maximum Operating Frequency:    65 MHz
+
+The clock period is 15.50.
+Clock period = path delay + clock-to-output delay + setup time
+  path delay:              11.50
+  clock-to-output delay:   1.30
+  setup time:              2.70
+
+
+The following path determines the frequency: 
+
+  Startpoint: GLB_I26_Q/Q0
+              (edge-triggered flip-flop)
+  Endpoint: GLB_DEF_719/D0
+              (edge-triggered flip-flop)
+  No. of GLB Levels: 1
+
+Internal Register  Paths and Frequencies:
+
+  Source              Source                  Destination       Destination             Clock     Frequency   # of GLB     
+  Reference           Register                Reference         Register                Period      [MHz]     Levels       
+  Clock               Name                    Clock             Name                     [ns]     
+==----------------------------------------------------------------------------------------------------------------
+  GLB_I30_Q           GLB_I31_Q/Q0            GLB_I31_Q         GLB_I28_Q/CLK            24.50     ----     2    
+  H                   GLB_I30_Q/Q0            GLB_I30_Q         GLB_I31_Q/CLK            17.20     ----     1    
+  GLB_I28_Q           GLB_I26_Q/Q0            GLB_I28_Q         GLB_DEF_719/D0           15.50     65        1    
+  GLB_I28_Q           GLB_I27_Q/Q0            GLB_I28_Q         GLB_DEF_722/D0           15.50     65        1    
+  GLB_I28_Q           GLB_...1N14 *1/Q0       GLB_I28_Q         GLB_DEF_726/D0           15.50     65        1    
+  GLB_I28_Q           GLB_I26_Q/Q0            GLB_I28_Q         GLB_...1N14 *1/D0        15.50     65        1    
+  GLB_I28_Q           GLB_I27_Q/Q0            GLB_I28_Q         GLB_I25_Q/D0             15.50     65        1    
+  GLB_I28_Q           GLB_...1N14 *1/Q0       GLB_I28_Q         GLB_I27_Q/D0             15.50     65        1    
+  GLB_I28_Q           GLB_I25_Q/Q0            GLB_I28_Q         GLB_DEF_724/D0           15.30     65        1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I31_Q         GLB_I28_Q/D0             14.70     68        1    
+  GLB_I28_Q           GLB_I25_Q/Q0            GLB_I28_Q         GLB_I26_Q/D0             14.00     71        1    
+  H                   GLB_I30_Q/Q0            H                 GLB_I30_Q/D0             14.00     71        1    
+  GLB_I30_Q           GLB_I31_Q/Q0            GLB_I30_Q         GLB_I31_Q/D0             14.00     71        1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_DEF_719/CLK          11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_DEF_722/CLK          11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_DEF_724/CLK          11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_DEF_726/CLK          11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_...1N14 *1/CLK       11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_I25_Q/CLK            11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_I26_Q/CLK            11.90     ----     1    
+  GLB_I31_Q           GLB_I28_Q/Q0            GLB_I28_Q         GLB_I27_Q/CLK            11.90     ----     1    
+==-------------------------------------------------------------------------------------------
+
+Index Name Table
+==----------------------------------------
+    *1  GLB_I24_U1_$1N14
+==----------------------------------------
+
+Information for flip-flop:
+
+  Global reset-to-output delay:   3.30
+  Clock-to-output delay:          1.30
+  User reset-to-output delay:     3.30
+  Data-to-output delay:           0.00
+  Setup time:                     2.70
+  Hold time:                      4.70
+  Pulse-width time:               6.00
+
+

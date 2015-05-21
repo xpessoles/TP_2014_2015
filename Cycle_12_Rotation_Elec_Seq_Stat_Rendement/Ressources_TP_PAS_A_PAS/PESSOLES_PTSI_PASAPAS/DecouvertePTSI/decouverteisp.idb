@@ -1,0 +1,15 @@
+1 1.8.00.04.29.14
+-i c:\users\eleve\desktop\ptsi\decouverteptsi\decouverteisp.laf -if laf -p ispLSI1016-60LH44/883 -of vhdl -of verilog -s d -e 2 -z -m 16 -n 4 -ta on -y c:\users\eleve\desktop\ptsi\decouverteptsi\DecouverteISP.xpn -r c:\users\eleve\desktop\ptsi\decouverteptsi\ispxpert.par 
+c:\users\eleve\desktop\ptsi\decouverteptsi\ispxpert.par 1432109165 Wed May 20 11:06:05 2015
+decouverteisp.ppn 1432109167 Wed May 20 11:06:07 2015
+decouverteisp.fxp 1432109167 Wed May 20 11:06:07 2015
+c:\users\eleve\desktop\ptsi\decouverteptsi\decouverteisp.laf 1432109136 Wed May 20 11:05:36 2015
+>  c:\users\eleve\desktop\ptsi\decouverteptsi\DecouverteISP.xpn
+// PART: 	ispLSI1016-60LH44/883
+// FORMAT: 	PINNAME		PINTYPE	LOCK	PULLUP	SLOWSLEW	OPENDRAIN	OUTDELAY	VOLTAGE	CRIT
+		SW1			-		3	-1		-1		-1		-1		-1		-1
+		LED1			-		44	-1		-1		-1		-1		-1		-1
+
+// FORMAT: 	NETNAME		CLK		PRESERVE	ECP	GROUP		XOR	ELP	ETP
+
+// FORMAT: 	SYMNAME		PROTECT	REGTYPE

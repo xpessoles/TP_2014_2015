@@ -1,0 +1,17 @@
+ispLEVER Classic 1.8.00.04.29.14 Signal Name Cross Reference File
+Copyright(C), 1992-2014, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design 'testled' created Wed May 20 11:05:34 2015
+
+Title:  testled.bls 
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+
+ *** Shortened names not required for this design. ***

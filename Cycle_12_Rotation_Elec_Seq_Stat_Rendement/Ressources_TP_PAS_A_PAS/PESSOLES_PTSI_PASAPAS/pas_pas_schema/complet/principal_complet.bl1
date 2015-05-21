@@ -1,0 +1,146 @@
+#$ TOOL ispLEVER 6.1.01.55.12.07.SP2007.01
+#$ DATE Mon May 09 21:47:48 2011
+#$ TITLE principal_complet.bls 
+#$ PROPERTY PLSI LOCK LPH1 37
+#$ PROPERTY PLSI LOCK LPH4 40
+#$ PROPERTY PLSI LOCK LPH3 39
+#$ PROPERTY PLSI LOCK LPH2 38
+#$ PROPERTY PLSI LOCK S0 41
+#$ PROPERTY PLSI LOCK S3 44
+#$ PROPERTY PLSI LOCK S2 43
+#$ PROPERTY PLSI LOCK S1 42
+#$ PROPERTY PLSI LOCK PH1 26
+#$ PROPERTY PLSI LOCK PH4 25
+#$ PROPERTY PLSI LOCK PH3 30
+#$ PROPERTY PLSI LOCK PH2 29
+#$ PROPERTY PLSI LOCK H 11
+#$ PROPERTY PLSI LOCK set 3
+#$ PROPERTY PLSI LOCK sens 9
+#$ MODULE principal_complet
+#$ PINS 15 LPH4'ke,o'  LPH3'ke,o'  LPH2'ke,o'  LPH1'ke,o'  S0'ke,o'  S1'ke,o'  S2'ke,o'  S3'ke,o'  set'ke'  sens'ke'  PH1'ke,o'  PH2'ke,o'  PH3'ke,o'  PH4'ke,o'  H'ke' 
+#$ NODES 18 N_52 N_53 N_54 N_48'o'  N_51 Q3'o'  Q2'o'  Q1'o'  Q0'o'  N_41'o'  N_42'o'  N_43'o'  N_44'o'  N_45'o'  N_46'o'  N_40'o'  N_39'o'  N_18'o' 
+#$ INTERFACE l_mux2  4 A0'i'  A1'i'  S0'i'  Z0'o' 
+#$ INSTANCE I38 l_mux2 4 Q2 Q1 N_48 N_52
+#$ INSTANCE I39 l_mux2 4 Q3 Q0 N_48 N_51
+#$ INSTANCE I40 l_mux2 4 Q0 Q3 N_48 N_54
+#$ INSTANCE I41 l_mux2 4 Q1 Q2 N_48 N_53
+
+.model principal_complet
+.inputs Q0.BLIF Q3.BLIF Q1.BLIF Q2.BLIF H.BLIF N_45.BLIF N_46.BLIF N_41.BLIF \
+N_42.BLIF N_44.BLIF N_43.BLIF N_40.BLIF N_18.BLIF sens.BLIF set.BLIF N_39.BLIF \
+N_54.BLIF N_53.BLIF N_52.BLIF N_51.BLIF
+.outputs N_41 N_18.D N_18.C N_44.D N_44.C N_45.D N_45.C Q2.REG Q2.AR Q2.C \
+Q3.REG Q3.AR Q3.C Q1.REG Q1.AR Q1.C Q0.PR Q0.D Q0.C N_48 N_39 N_40 N_42 N_43 \
+N_46 PH4 PH3 PH2 PH1 S0 S3 S2 S1 LPH1 LPH4 LPH3 LPH2
+.names N_39.BLIF N_40
+0 1
+1 0
+.names N_44.BLIF N_42
+0 1
+1 0
+.names N_45.BLIF N_43
+0 1
+1 0
+.names N_18.BLIF N_46
+0 1
+1 0
+.names H.BLIF N_41
+1 1
+0 0
+.names N_46.BLIF N_18.D
+1 1
+0 0
+.names N_45.BLIF N_18.C
+1 1
+0 0
+.names N_42.BLIF N_44.D
+1 1
+0 0
+.names N_41.BLIF N_44.C
+1 1
+0 0
+.names N_43.BLIF N_45.D
+1 1
+0 0
+.names N_44.BLIF N_45.C
+1 1
+0 0
+.names Q1.BLIF Q2.REG
+1 1
+0 0
+.names N_40.BLIF Q2.AR
+1 1
+0 0
+.names N_18.BLIF Q2.C
+1 1
+0 0
+.names Q2.BLIF Q3.REG
+1 1
+0 0
+.names N_40.BLIF Q3.AR
+1 1
+0 0
+.names N_18.BLIF Q3.C
+1 1
+0 0
+.names Q0.BLIF Q1.REG
+1 1
+0 0
+.names N_40.BLIF Q1.AR
+1 1
+0 0
+.names N_18.BLIF Q1.C
+1 1
+0 0
+.names N_40.BLIF Q0.PR
+1 1
+0 0
+.names Q3.BLIF Q0.D
+1 1
+0 0
+.names N_18.BLIF Q0.C
+1 1
+0 0
+.names sens.BLIF N_48
+1 1
+0 0
+.names set.BLIF N_39
+1 1
+0 0
+.names N_54.BLIF PH4
+1 1
+0 0
+.names N_53.BLIF PH3
+1 1
+0 0
+.names N_52.BLIF PH2
+1 1
+0 0
+.names N_51.BLIF PH1
+1 1
+0 0
+.names Q3.BLIF S0
+1 1
+0 0
+.names Q0.BLIF S3
+1 1
+0 0
+.names Q1.BLIF S2
+1 1
+0 0
+.names Q2.BLIF S1
+1 1
+0 0
+.names N_51.BLIF LPH1
+1 1
+0 0
+.names N_54.BLIF LPH4
+1 1
+0 0
+.names N_53.BLIF LPH3
+1 1
+0 0
+.names N_52.BLIF LPH2
+1 1
+0 0
+.end

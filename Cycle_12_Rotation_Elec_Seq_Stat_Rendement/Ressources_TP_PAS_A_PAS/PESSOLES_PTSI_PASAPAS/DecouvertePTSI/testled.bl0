@@ -1,0 +1,31 @@
+#$ TOOL ispLEVER Classic 1.8.00.04.29.14
+#$ DATE Wed May 20 11:05:34 2015
+#$ TITLE testled.bls 
+#$ MODULE testled
+#$ PINS 2 LED1'o'  SW1
+#$ NODES 1 N_1'o' 
+
+.model testled
+.inputs SW1.BLIF N_1.BLIF
+.outputs N_1 LED1
+
+.subckt g_input I.BLIF=SW1.BLIF O=N_1
+
+.subckt g_output I.BLIF=N_1.BLIF O=LED1
+.end
+
+.model g_input
+.inputs I.BLIF
+.outputs O
+.names I.BLIF O
+1 1
+0 0
+.end
+
+.model g_output
+.inputs I.BLIF
+.outputs O
+.names I.BLIF O
+1 1
+0 0
+.end

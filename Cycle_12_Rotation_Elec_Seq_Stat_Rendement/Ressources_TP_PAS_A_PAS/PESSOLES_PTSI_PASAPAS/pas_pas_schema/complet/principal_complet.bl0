@@ -1,0 +1,213 @@
+#$ TOOL ispLEVER 6.1.01.55.12.07.SP2007.01
+#$ DATE Mon May 09 21:47:48 2011
+#$ TITLE principal_complet.bls 
+#$ PROPERTY PLSI LOCK LPH1 37
+#$ PROPERTY PLSI LOCK LPH4 40
+#$ PROPERTY PLSI LOCK LPH3 39
+#$ PROPERTY PLSI LOCK LPH2 38
+#$ PROPERTY PLSI LOCK S0 41
+#$ PROPERTY PLSI LOCK S3 44
+#$ PROPERTY PLSI LOCK S2 43
+#$ PROPERTY PLSI LOCK S1 42
+#$ PROPERTY PLSI LOCK PH1 26
+#$ PROPERTY PLSI LOCK PH4 25
+#$ PROPERTY PLSI LOCK PH3 30
+#$ PROPERTY PLSI LOCK PH2 29
+#$ PROPERTY PLSI LOCK H 11
+#$ PROPERTY PLSI LOCK set 3
+#$ PROPERTY PLSI LOCK sens 9
+#$ MODULE principal_complet
+#$ PINS 15 LPH4'ke,o'  LPH3'ke,o'  LPH2'ke,o'  LPH1'ke,o'  S0'ke,o'  S1'ke,o'  S2'ke,o'  S3'ke,o'  set'ke'  sens'ke'  PH1'ke,o'  PH2'ke,o'  PH3'ke,o'  PH4'ke,o'  H'ke' 
+#$ NODES 34 N_52 N_53 N_54 N_48'o'  N_51 Q3'o'  Q2'o'  Q1'o'  Q0'o'  N_41'o'  N_42'o'  N_43'o'  N_44'o'  N_45'o'  N_46'o'  N_40'o'  N_39'o'  N_18'o'  I41>Z0 I40>Z0 I39>Z0 I40>A0 I39>A1 I40>A1 I39>A0 I38>Z0 \
+#  I41>S0 I40>S0 I39>S0 I38>S0 I41>A0 I38>A1 I41>A1 I38>A0
+#$ INTERFACE l_mux2  4 A0'i'  A1'i'  S0'i'  Z0'o' 
+#$ INSTANCE I38 l_mux2 4 I38>A0 I38>A1 I38>S0 I38>Z0
+#$ INSTANCE I39 l_mux2 4 I39>A0 I39>A1 I39>S0 I39>Z0
+#$ INSTANCE I40 l_mux2 4 I40>A0 I40>A1 I40>S0 I40>Z0
+#$ INSTANCE I41 l_mux2 4 I41>A0 I41>A1 I41>S0 I41>Z0
+
+.model principal_complet
+.inputs I41>Z0.BLIF I40>Z0.BLIF I39>Z0.BLIF Q0.BLIF Q3.BLIF I38>Z0.BLIF N_48.BLIF \
+Q1.BLIF Q2.BLIF H.BLIF N_45.BLIF N_46.BLIF N_41.BLIF N_42.BLIF N_44.BLIF \
+N_43.BLIF N_40.BLIF N_18.BLIF sens.BLIF set.BLIF N_39.BLIF N_54.BLIF N_53.BLIF \
+N_52.BLIF N_51.BLIF
+.outputs N_53 N_54 N_51 I40>A0 I39>A1 I40>A1 I39>A0 N_52 I41>S0 I40>S0 I39>S0 \
+I38>S0 I41>A0 I38>A1 I41>A1 I38>A0 N_41 N_18.D N_18.C N_44.D N_44.C N_45.D \
+N_45.C Q2.REG Q2.AR Q2.C Q3.REG Q3.AR Q3.C Q1.REG Q1.AR Q1.C Q0.PR Q0.D Q0.C \
+N_48 N_39 N_40 N_42 N_43 N_46 PH4 PH3 PH2 PH1 S0 S3 S2 S1 LPH1 LPH4 LPH3 LPH2
+
+.subckt g_clkbuf I.BLIF=H.BLIF O=N_41
+
+.subckt g_d CLK.BLIF=N_45.BLIF D.BLIF=N_46.BLIF Q.D=N_18.D Q.C=N_18.C
+
+.subckt g_d CLK.BLIF=N_41.BLIF D.BLIF=N_42.BLIF Q.D=N_44.D Q.C=N_44.C
+
+.subckt g_d CLK.BLIF=N_44.BLIF D.BLIF=N_43.BLIF Q.D=N_45.D Q.C=N_45.C
+\
+
+.subckt g_dc C.BLIF=N_40.BLIF CLK.BLIF=N_18.BLIF D.BLIF=Q1.BLIF Q.REG=Q2.REG Q.AR=Q2.AR Q.C=Q2.C
+\
+
+.subckt g_dc C.BLIF=N_40.BLIF CLK.BLIF=N_18.BLIF D.BLIF=Q2.BLIF Q.REG=Q3.REG Q.AR=Q3.AR Q.C=Q3.C
+\
+
+.subckt g_dc C.BLIF=N_40.BLIF CLK.BLIF=N_18.BLIF D.BLIF=Q0.BLIF Q.REG=Q1.REG Q.AR=Q1.AR Q.C=Q1.C
+\
+
+.subckt g_dp CLK.BLIF=N_18.BLIF D.BLIF=Q3.BLIF P.BLIF=N_40.BLIF Q.PR=Q0.PR Q.D=Q0.D Q.C=Q0.C
+
+.subckt g_input I.BLIF=sens.BLIF O=N_48
+
+.subckt g_input I.BLIF=set.BLIF O=N_39
+
+.subckt g_inv A.BLIF=N_39.BLIF YN=N_40
+
+.subckt g_inv A.BLIF=N_44.BLIF YN=N_42
+
+.subckt g_inv A.BLIF=N_45.BLIF YN=N_43
+
+.subckt g_inv A.BLIF=N_18.BLIF YN=N_46
+
+.subckt g_output I.BLIF=N_54.BLIF O=PH4
+
+.subckt g_output I.BLIF=N_53.BLIF O=PH3
+
+.subckt g_output I.BLIF=N_52.BLIF O=PH2
+
+.subckt g_output I.BLIF=N_51.BLIF O=PH1
+
+.subckt g_output I.BLIF=Q3.BLIF O=S0
+
+.subckt g_output I.BLIF=Q0.BLIF O=S3
+
+.subckt g_output I.BLIF=Q1.BLIF O=S2
+
+.subckt g_output I.BLIF=Q2.BLIF O=S1
+
+.subckt g_output I.BLIF=N_51.BLIF O=LPH1
+
+.subckt g_output I.BLIF=N_54.BLIF O=LPH4
+
+.subckt g_output I.BLIF=N_53.BLIF O=LPH3
+
+.subckt g_output I.BLIF=N_52.BLIF O=LPH2
+.names I41>Z0.BLIF N_53
+1 1
+0 0
+.names I40>Z0.BLIF N_54
+1 1
+0 0
+.names I39>Z0.BLIF N_51
+1 1
+0 0
+.names Q0.BLIF I40>A0
+1 1
+0 0
+.names Q0.BLIF I39>A1
+1 1
+0 0
+.names Q3.BLIF I40>A1
+1 1
+0 0
+.names Q3.BLIF I39>A0
+1 1
+0 0
+.names I38>Z0.BLIF N_52
+1 1
+0 0
+.names N_48.BLIF I41>S0
+1 1
+0 0
+.names N_48.BLIF I40>S0
+1 1
+0 0
+.names N_48.BLIF I39>S0
+1 1
+0 0
+.names N_48.BLIF I38>S0
+1 1
+0 0
+.names Q1.BLIF I41>A0
+1 1
+0 0
+.names Q1.BLIF I38>A1
+1 1
+0 0
+.names Q2.BLIF I41>A1
+1 1
+0 0
+.names Q2.BLIF I38>A0
+1 1
+0 0
+.end
+
+.model g_clkbuf
+.inputs I.BLIF
+.outputs O
+.names I.BLIF O
+1 1
+0 0
+.end
+
+.model g_d
+.inputs D.BLIF CLK.BLIF
+.outputs Q.D Q.C
+.names D.BLIF Q.D
+1 1
+0 0
+.names CLK.BLIF Q.C
+1 1
+0 0
+.end
+
+.model g_dc
+.inputs C.BLIF CLK.BLIF D.BLIF
+.outputs Q.REG Q.C Q.AR
+.names D.BLIF Q.REG
+1 1
+0 0
+.names CLK.BLIF Q.C
+1 1
+0 0
+.names C.BLIF Q.AR
+1 1
+0 0
+.end
+
+.model g_dp
+.inputs D.BLIF P.BLIF CLK.BLIF
+.outputs Q.D Q.PR Q.C
+.names D.BLIF Q.D
+1 1
+0 0
+.names P.BLIF Q.PR
+1 1
+0 0
+.names CLK.BLIF Q.C
+1 1
+0 0
+.end
+
+.model g_input
+.inputs I.BLIF
+.outputs O
+.names I.BLIF O
+1 1
+0 0
+.end
+
+.model g_inv
+.inputs A.BLIF
+.outputs YN
+.names A.BLIF YN
+0 1
+1 0
+.end
+
+.model g_output
+.inputs I.BLIF
+.outputs O
+.names I.BLIF O
+1 1
+0 0
+.end

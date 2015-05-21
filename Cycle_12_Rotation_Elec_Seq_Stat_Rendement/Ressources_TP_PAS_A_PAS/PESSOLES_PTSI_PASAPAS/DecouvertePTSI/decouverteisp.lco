@@ -1,0 +1,63 @@
+[DEVICE]
+Family = plsi1k;
+PartNumber = ispLSI1016-60LH44/883;
+PartType = ispLSI1016;
+Package = 44JLCC;
+Speed = 60;
+Operating_condition = COM;
+Default_Device_Io_Types = LVCMOS50,-;
+
+[REVISION]
+RCS = ;
+Parent = lc1k.lci;
+Design = decouverteisp;
+DATE = 05/20/2015;
+TIME = 11:06:08;
+Source_Format = ;
+Type = ;
+Pre_Fit_Time = ;
+
+[IGNORE ASSIGNMENTS]
+
+[CLEAR ASSIGNMENTS]
+
+[BACKANNOTATE ASSIGNMENTS]
+
+[GLOBAL CONSTRAINTS]
+Security = Off;
+PULLUP = Up;
+Y1_AS_RESET = On;
+ISP = On;
+ISP_EXCEPT_Y2 = Off;
+
+[FITTER REPORT FORMAT]
+
+[LOCATION ASSIGNMENTS]
+SW1 = pin, 3, -, -, -;
+LED1 = pin, 44, -, -, -;
+
+[PULLUP]
+Up = SW1, LED1; 
+
+[SLEWRATE]
+FAST = LED1; 
+
+[IO TYPES]
+
+[OSM Bypass]
+
+[CLK]
+
+[PTSABYPASS]
+
+[Fitter Results]
+I/O_Pin_Util = 6;
+I/O_Pin = 2;
+Logic_PT_Util = 0;
+Logic_PT = 1;
+Logic_MC_Util = 1;
+Logic_MC = 1;
+Occupied_PT_Util = 0;
+Occupied_PT = 1;
+GLB_input_Util = 0;
+GLB_input = 1;

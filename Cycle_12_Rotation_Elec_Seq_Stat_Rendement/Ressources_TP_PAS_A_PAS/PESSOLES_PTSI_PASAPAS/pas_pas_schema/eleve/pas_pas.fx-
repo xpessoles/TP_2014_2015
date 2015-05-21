@@ -1,0 +1,10 @@
+16 No_Buf Reg_mode
+GLB 0 glb02 3 -1 6    -1 I25_Q -1 -1     NULL
+GLB 1 glb01 -1 -1 1    I27_Q I24_U1_$1N14 -1 -1     NULL
+GLB 2 glb00 -1 -1 8    -1 I28_Q -1 -1     NULL
+GLB 3 glb02 -1 0 0    I26_Q -1 -1 -1     NULL
+CT_IO Loc_8 PH1
+CT_IO Loc_9 PH2
+CT_IO Loc_12 PH3
+CT_IO Loc_13 PH4
+CT_IO Loc_24 SET

@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.8 
+PROJECT DecouverteISP
+DESIGN decouverteisp Normal
+DEVKIT ispLSI1016-60LH44/883
+ENTRY ABEL/Schematic
+MODULE testled.sch
+MODSTYLE testled Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE testled

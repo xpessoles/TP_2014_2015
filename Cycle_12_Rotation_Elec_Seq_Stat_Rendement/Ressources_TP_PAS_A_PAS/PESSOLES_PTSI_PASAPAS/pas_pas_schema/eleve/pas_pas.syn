@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.8 
+PROJECT pas_pas
+DESIGN pas_pas Normal
+DEVKIT ispLSI1016-60LH44/883
+ENTRY Schematic/VHDL
+MODULE principal.sch
+MODSTYLE principal Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE principal

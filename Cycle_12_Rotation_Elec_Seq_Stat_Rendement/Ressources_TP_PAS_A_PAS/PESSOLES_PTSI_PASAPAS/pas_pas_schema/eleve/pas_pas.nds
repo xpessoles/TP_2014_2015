@@ -1,0 +1,53 @@
+//Design Name: pas_pas
+//START
+
+//DESTINATION NODES
+GLB_DEF_719.D0 [reg]
+GLB_DEF_719.CLK [reg]
+GLB_I28_Q.D0 [reg]
+GLB_I28_Q.CLK [reg]
+GLB_I31_Q.D0 [reg]
+GLB_I31_Q.CLK [reg]
+GLB_I26_Q.D0 [reg]
+GLB_I26_Q.CLK [reg]
+GLB_I24_U1_$1N14.D0 [reg]
+GLB_I24_U1_$1N14.CLK [reg]
+GLB_I30_Q.D0 [reg]
+GLB_I30_Q.CLK [reg]
+GLB_DEF_722.D0 [reg]
+GLB_DEF_722.CLK [reg]
+GLB_DEF_724.D0 [reg]
+GLB_DEF_724.CLK [reg]
+GLB_DEF_726.D0 [reg]
+GLB_DEF_726.CLK [reg]
+GLB_I27_Q.D0 [reg]
+GLB_I27_Q.CLK [reg]
+GLB_I25_Q.D0 [reg]
+GLB_I25_Q.CLK [reg]
+S1 [out]
+S2 [out]
+S3 [out]
+PH1 [out]
+PH2 [out]
+PH3 [out]
+PH4 [out]
+S0 [out]
+
+//SOURCE NODES;
+
+H [in]
+SET [in]
+XRESET [in]
+GLB_I25_Q.Q0 [reg]
+GLB_I27_Q.Q0 [reg]
+GLB_DEF_726.Q0 [reg]
+GLB_DEF_724.Q0 [reg]
+GLB_DEF_722.Q0 [reg]
+GLB_I30_Q.Q0 [reg]
+GLB_I24_U1_$1N14.Q0 [reg]
+GLB_I26_Q.Q0 [reg]
+GLB_I31_Q.Q0 [reg]
+GLB_I28_Q.Q0 [reg]
+GLB_DEF_719.Q0 [reg]
+
+//END

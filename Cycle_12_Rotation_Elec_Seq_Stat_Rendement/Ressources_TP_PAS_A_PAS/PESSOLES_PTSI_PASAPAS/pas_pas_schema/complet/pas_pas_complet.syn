@@ -1,0 +1,10 @@
+JDF B
+// Created by Version 6.1 
+PROJECT pas_pas_complet
+DESIGN pas_pas_complet Normal
+DEVKIT ispLSI1016-60LH44/883
+ENTRY ABEL/Schematic
+MODULE principal_complet.sch
+MODSTYLE principal_complet Normal
+SYNTHESIS_TOOL Synplify
+TOPMODULE principal_complet

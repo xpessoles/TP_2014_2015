@@ -1,0 +1,82 @@
+-- VHDL netlist for testled
+-- Date: Wed May 20 11:06:10 2015
+-- Copyright (c) Lattice Semiconductor Corporation
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+LIBRARY LAT_VITL; -- Lattice Vital library 
+USE LAT_VITL.vit_pkg.all;
+USE work.all;
+
+ENTITY testled IS 
+    PORT (
+        SW1 : IN std_logic;
+        LED1 : OUT std_logic
+    );
+END testled;
+
+
+ARCHITECTURE testled_STRUCTURE OF testled IS
+SIGNAL GND : std_logic := '0';
+SIGNAL  IO24_IBUFO, IO23_OBUFI, BUF_663_iomux, B6_P0_xa,
+	 BUF_663, B6_X3O, B6_G0, SW1X_grp,
+	 B6_P0, B6_IN7 : std_logic;
+
+
+  COMPONENT PGBUFI
+    PORT (
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGBUFI use entity lat_vitl.PGBUFI(behav);
+
+  COMPONENT PGXOR2
+    PORT (
+        A1 : IN std_logic;
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGXOR2 use entity lat_vitl.PGXOR2(behav);
+
+  COMPONENT PXIN
+    PORT (
+        XI0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PXIN use entity lat_vitl.PXIN(behav);
+
+  COMPONENT PXOUT
+    PORT (
+        A0 : IN std_logic;
+        XO0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PXOUT use entity lat_vitl.PXOUT(behav);
+
+BEGIN
+
+GLB_B6_P0 : PGBUFI
+	PORT MAP (Z0 => B6_P0, A0 => B6_IN7);
+GLB_B6_G0 : PGBUFI
+	PORT MAP (Z0 => B6_G0, A0 => GND);
+GLB_B6_P0_xa : PGBUFI
+	PORT MAP (Z0 => B6_P0_xa, A0 => B6_P0);
+GLB_BUF_663 : PGBUFI
+	PORT MAP (Z0 => BUF_663, A0 => B6_X3O);
+GLB_B6_IN7 : PGBUFI
+	PORT MAP (Z0 => B6_IN7, A0 => SW1X_grp);
+GLB_B6_X3O : PGXOR2
+	PORT MAP (Z0 => B6_X3O, A1 => B6_P0_xa, A0 => B6_G0);
+IOC_IO24_IBUFO : PXIN
+	PORT MAP (Z0 => IO24_IBUFO, XI0 => SW1);
+IOC_LED1 : PXOUT
+	PORT MAP (XO0 => LED1, A0 => IO23_OBUFI);
+IOC_IO23_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO23_OBUFI, A0 => BUF_663_iomux);
+GRP_BUF_663_iomux : PGBUFI
+	PORT MAP (Z0 => BUF_663_iomux, A0 => BUF_663);
+GRP_SW1X_grp : PGBUFI
+	PORT MAP (Z0 => SW1X_grp, A0 => IO24_IBUFO);
+END testled_STRUCTURE;

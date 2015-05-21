@@ -1,0 +1,240 @@
+arg[0] = C:\ispLEVER_Classic1_8\ispcomp\bin\dpm.exe
+arg[1] = -i
+arg[2] = "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.laf"
+arg[3] = -if
+arg[4] = laf
+arg[5] = -p
+arg[6] = ispLSI1016-60LH44/883
+arg[7] = -of
+arg[8] = vhdl
+arg[9] = -of
+arg[10] = verilog
+arg[11] = -s
+arg[12] = d
+arg[13] = -e
+arg[14] = 2
+arg[15] = -z
+arg[16] = -m
+arg[17] = 16
+arg[18] = -n
+arg[19] = 4
+arg[20] = -ta
+arg[21] = on
+arg[22] = -y
+arg[23] = "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.xpn"
+arg[24] = -r
+arg[25] = "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\ispxpert.par"
+cmd line = C:\ispLEVER_Classic1_8\ispcomp\bin\dpm.exe -i "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.laf" -if laf -p ispLSI1016-60LH44/883 -of vhdl -of verilog -s d -e 2 -z -m 16 -n 4 -ta on -y "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.xpn" -r "c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\ispxpert.par" 
+ispEXPERT Compiler Release 1.8.00.04.29.14, May 20 2002 13:06:40
+
+Copyright (C) 1994-2000 by Lattice Semiconductor Corporation.
+All Rights Reserved.
+
+
+Design Process Management 
+
+Renaming existing log file to pas_pas.lo-
+Renaming existing rpt file to pas_pas.rp-
+
+Preprocessing design 'pas_pas'...
+
+Processing design 'pas_pas'...
+
+
+Logical LAF Reading and Translation 
+  
+Reading file 
+      'c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.laf'...
+  
+Checking design rules... 
+Selected part is 'ispLSI1016-60LH44/883' 
+32581 WARNING: Option 'SLOWSLEW OFF' is not valid for part 
+      'ispLSI1016-60LH44/883'; option 'SLOWSLEW OFF' is ignored 
+32513 WARNING: Net 'GND' is floating 
+32513 WARNING: Net 'VCC' is floating 
+  
+Writing output files... 
+  
+Logical LAF reading and translation completed successfully 
+
+
+Synthesis and Partitioning 
+  
+Reading design 'pas_pas'... 
+33645 WARNING: Signal 'VCC' does not fan out 
+33645 WARNING: Signal 'GND' does not fan out 
+  
+Optimizing logic... 
+  
+Trying to move PT reset signal to global reset pin... 
+      PT reset signal cannot be moved to global reset pin 
+      In order to move PT reset signal to global reset pin, the 
+      following conditions need to be satisfied: 
+      1. There exists at least one pin which drives all register's reset
+      signals 
+      2. This pin is unlocked 
+      3. This pin does not drive any data signals 
+      4. This pin can be disjointly decomposed with other pins, if any, 
+      which drive reset signals 
+  
+Partitioning logic into 16-input, 16-input with DIs, functions to 
+      minimize delay... 
+  
+Extracting LXOR2 gates to minimize delay... 
+  
+Packing functions into GLBs using 16 inputs and 4 outputs per GLB to 
+      minimize delay... 
+34557 WARNING: Net 'I24_U1_$1N14' drives IOCs locked to different 
+      megablocks; input logic is duplicated for IOC 'S3', new input net
+      is 'DEF_719' 
+34557 WARNING: Net 'I25_Q' drives IOCs locked to different megablocks; 
+      input logic is duplicated for IOC 'S1', new input net is 
+      'DEF_722' 
+34557 WARNING: Net 'I26_Q' drives IOCs locked to different megablocks; 
+      input logic is duplicated for IOC 'S0', new input net is 
+      'DEF_724' 
+34557 WARNING: Net 'I27_Q' drives IOCs locked to different megablocks; 
+      input logic is duplicated for IOC 'S2', new input net is 
+      'DEF_726' 
+  
+Synthesis and partitioning statistics: 
+  
+Number of Macrocells is 12 
+Number of GLBs is 6 
+Number of product terms is 13 
+Maximum number of GLB levels is 1 
+Average number of inputs per GLB is 2.7 
+Average number of outputs per GLB is 2.0 
+Average number of product terms per GLB is 2.2 
+  
+Synthesis and partitioning completed successfully 
+
+
+Physical LAF Reading and Translation
+
+Reading design 'pas_pas'...
+
+Writing output files...
+
+Physical LAF reading and translation completed successfully
+
+
+Placement and Routing
+
+Reading design 'pas_pas'...
+
+Routing
+
+
+Writing output files...
+
+Placement and routing completed successfully
+
+
+Technology Remapping 
+  
+Reading design 'pas_pas'... 
+  
+Remapping... 
+  
+Writing output files... 
+  
+Writing output lco files... 
+  
+Technology remapping completed successfully 
+
+
+Physical LAF Reading and Translation
+
+Reading design 'pas_pas'...
+
+Writing output files...
+
+Physical LAF reading and translation completed successfully
+
+
+Fusemap Generation
+
+Reading design 'pas_pas'...
+
+Writing output files...
+
+Fusemap generation completed successfully
+
+
+Simulation LAF Netlist Generation
+
+Reading design 'pas_pas'...
+
+Writing output files...
+
+
+Information: Global reset (XRESET) is generated to reset all registers
+
+
+
+Simulation LAF netlist generation completed successfully
+
+
+Timing Analyzer 
+Reading design pas_pas .... 
+
+Evaluating maximum operating frequency ...
+Evaluating setup and hold times...
+43006 WARNING: No chip input pins drive data input and clock input of any register
+
+Calculating Tpd Path delays .....
+
+43123 WARNING: There are no Tpd paths for this mode of analysis in this design
+               
+         
+Timing analyzer completed successfully 
+
+
+
+Lattice Verilog netlist writer
+writing verilog netlist ...
+
+writing SDF file pas_pas.sdf ...
+
+MSG: Please use SDF file pas_pas.vsf for tools that do not support conditional delays.
+
+writing SDF file pas_pas.vsf ...
+
+Verilog netlist writer completed successfully.
+
+
+
+Lattice VHDL netlist writer
+Copyright (c) 1993 - 2000 by Lattice Semiconductor Corporation.
+All Rights Reserved.
+
+writing vhdl file ...
+
+Please use the file: pas_pas.vho for non-VITAL VHDL timing simulation with max delay.
+
+
+MSG: Cross reference file [PRINCIPAL.vxf] is created
+       Invalid VHDL identifiers are mapped to new unique names.
+       You can use -ext_id option to use extended identifiers if your
+       target system supports extended VHDL identifiers.
+
+
+Please use file [PRINCIPAL.vxf] for cross referencing original and new VHDL names.
+
+
+Please use the file: pas_pas.vhn for non-VITAL VHDL timing simulation with min delay.
+
+
+
+Please use the VHDL netlist pas_pas.vto,
+the SDF file pas_pas.sdf and Lattice Semiconductor VITAL library for
+timing simulation with a VITAL compliant simulator.
+
+
+writing SDF file pas_pas.sdf ...
+VHDL netlist writer completed successfully.
+
+
+Design process management completed successfully
+

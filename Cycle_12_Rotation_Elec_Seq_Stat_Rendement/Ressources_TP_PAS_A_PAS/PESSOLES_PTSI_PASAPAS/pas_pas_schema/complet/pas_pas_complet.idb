@@ -1,0 +1,28 @@
+1 6.1.01.55.12.07
+-i d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\pas_pas_complet.laf -if laf -p ispLSI1016-60LH44/883 -of vhdl -of verilog -s d -e 2 -z -m 16 -n 4 -ta on -y d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\pas_pas_complet.xpn -r d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\ispxpert.par 
+d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\ispxpert.par 1304970472 Mon May 09 21:47:52 2011
+pas_pas_complet.ppn 1304970473 Mon May 09 21:47:53 2011
+pas_pas_complet.fxp 1304970473 Mon May 09 21:47:53 2011
+d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\pas_pas_complet.laf 1304970470 Mon May 09 21:47:50 2011
+>  d:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\pas_pas_complet.xpn
+// PART: 	ispLSI1016-60LH44/883
+// FORMAT: 	PINNAME		PINTYPE	LOCK	PULLUP	SLOWSLEW	OPENDRAIN	OUTDELAY	VOLTAGE	CRIT
+		LPH1			-		37	-1		-1		-1		-1		-1		-1
+		LPH4			-		40	-1		-1		-1		-1		-1		-1
+		LPH3			-		39	-1		-1		-1		-1		-1		-1
+		LPH2			-		38	-1		-1		-1		-1		-1		-1
+		S0			-		41	-1		-1		-1		-1		-1		-1
+		S3			-		44	-1		-1		-1		-1		-1		-1
+		S2			-		43	-1		-1		-1		-1		-1		-1
+		S1			-		42	-1		-1		-1		-1		-1		-1
+		PH1			-		26	-1		-1		-1		-1		-1		-1
+		PH4			-		25	-1		-1		-1		-1		-1		-1
+		PH3			-		30	-1		-1		-1		-1		-1		-1
+		PH2			-		29	-1		-1		-1		-1		-1		-1
+		H			-		11	-1		-1		-1		-1		-1		-1
+		set			-		3	-1		-1		-1		-1		-1		-1
+		sens			-		9	-1		-1		-1		-1		-1		-1
+
+// FORMAT: 	NETNAME		CLK		PRESERVE	ECP	GROUP		XOR	ELP	ETP
+
+// FORMAT: 	SYMNAME		PROTECT	REGTYPE

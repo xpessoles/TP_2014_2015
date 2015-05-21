@@ -1,0 +1,23 @@
+Tpd Path Report:
+---------------
+
+Design Name: PAS_PAS_COMPLET
+Part Name: ispLSI1016-60LH44/883
+  This report contains the path delays between the
+  primary inputs and primary outputs of the design
+  with no register in the path.
+
+Tpd Paths:
+
+  Source                   Destination              Path Delay
+  (Input)                  (Output)                   [ns]
+==------------------------------------------------------------------------------
+  SENS                     PH4                      21.90 
+  SENS                     PH3                      21.90 
+  SENS                     PH2                      21.90 
+  SENS                     PH1                      21.90 
+  SENS                     LPH4                     21.90 
+  SENS                     LPH3                     21.90 
+  SENS                     LPH2                     21.90 
+  SENS                     LPH1                     21.90 
+==----------------------------------------------------------------------------

@@ -1,0 +1,988 @@
+(Edif PRINCIPAL
+  (edifversion 2 0 0 )
+  (ediflevel 0)
+  (keywordmap (keywordLevel 0))
+  (status
+    (written
+      (timeStamp 2015 05 20 08 43 26)
+      (program "edfmerge" (Version "2.0 Beta"))
+      (dataOrigin "ispLEVER Classic"
+        (Version "1.8"))))
+
+  (external Lattice
+    (ediflevel 0)
+    (technology (numberDefinition))
+
+    (cell AND2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell AND3
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell AND4
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell BUF
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell INV
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell LXOR2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell NAND2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell NAND3
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell NAND4
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell NOR2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell NOR3
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell NOR4
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell OR2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell OR3
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell OR4
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell XNOR2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port ZN0
+            (direction OUTPUT)))))
+    (cell MUX2
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port S0
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell MUX4
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port S0
+            (direction INPUT))
+          (port S1
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell MUX8
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port A2
+            (direction INPUT))
+          (port A3
+            (direction INPUT))
+          (port A4
+            (direction INPUT))
+          (port A5
+            (direction INPUT))
+          (port A6
+            (direction INPUT))
+          (port A7
+            (direction INPUT))
+          (port S0
+            (direction INPUT))
+          (port S1
+            (direction INPUT))
+          (port S2
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell ADDF1
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port B0
+            (direction INPUT))
+          (port CI
+            (direction INPUT))
+          (port CO
+            (direction OUTPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell ADDH1
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port B0
+            (direction INPUT))
+          (port CO
+            (direction OUTPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell BI11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port OE
+            (direction INPUT))
+          (port XB0
+            (direction INOUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell IB11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port XI0
+            (direction INPUT))
+          (port Z0
+            (direction OUTPUT)))))
+    (cell OB11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port XO0
+            (direction OUTPUT)))))
+    (cell OT11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port OE
+            (direction INPUT))
+          (port XO0
+            (direction OUTPUT)))))
+    (cell FD11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CLK
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell FD21
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CD
+            (direction INPUT))
+          (port CLK
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell FDB1
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CLK
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port SD
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell FJK11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CLK
+            (direction INPUT))
+          (port J0
+            (direction INPUT))
+          (port K0
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell FJK21
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CD
+            (direction INPUT))
+          (port CLK
+            (direction INPUT))
+          (port J0
+            (direction INPUT))
+          (port K0
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell FT11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CD
+            (direction INPUT))
+          (port CLK
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell LD11
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port D0
+            (direction INPUT))
+          (port G
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell LD21
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CD
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port G
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell LD31
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port D0
+            (direction INPUT))
+          (port G
+            (direction INPUT))
+          (port PD
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+    (cell LD41
+      (cellType GENERIC)
+      (view NetList
+        (viewType NETLIST)
+        (interface
+          (port CD
+            (direction INPUT))
+          (port D0
+            (direction INPUT))
+          (port G
+            (direction INPUT))
+          (port PD
+            (direction INPUT))
+          (port Q0
+            (direction OUTPUT)))))
+  )
+  (library PRINCIPAL
+    (ediflevel 0)
+    (technology (numberDefinition))
+
+    (cell G_INPUT (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port O
+            (direction OUTPUT))
+          (port I
+            (direction INPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef IB11
+                (libraryRef plsi))))
+          (net I
+            (joined
+              (portRef I)
+              (portRef XI0
+                (instanceRef U1))))
+          (net O
+            (joined
+              (portRef O)
+              (portRef Z0
+                (instanceRef U1)))))))
+
+
+    (cell G_CLKBUF (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port O
+            (direction OUTPUT))
+          (port I
+            (direction INPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef IB11
+                (libraryRef plsi))))
+          (net I
+            (joined
+              (portRef I)
+              (portRef XI0
+                (instanceRef U1))))
+          (net O
+            (joined
+              (portRef O)
+              (portRef Z0
+                (instanceRef U1)))))))
+
+
+    (cell G_OUTPUT (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port O
+            (direction OUTPUT))
+          (port I
+            (direction INPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef OB11
+                (libraryRef plsi))))
+          (net I
+            (joined
+              (portRef I)
+              (portRef A0
+                (instanceRef U1))))
+          (net O
+            (joined
+              (portRef O)
+              (portRef XO0
+                (instanceRef U1)))))))
+
+
+    (cell G_INV (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port A
+            (direction INPUT))
+          (port YN
+            (direction OUTPUT)))
+        (contents
+          (instance I_1
+            (viewRef NetList
+              (cellRef INV
+                (libraryRef plsi))))
+          (net YN
+            (joined
+              (portRef YN)
+              (portRef ZN0
+                (instanceRef I_1))))
+          (net A
+            (joined
+              (portRef A)
+              (portRef A0
+                (instanceRef I_1)))))))
+
+
+    (cell G_D (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port CLK
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef FD11
+                (libraryRef plsi))))
+          (net Q
+            (joined
+              (portRef Q)
+              (portRef Q0
+                (instanceRef U1))))
+          (net CLK
+            (joined
+              (portRef CLK)
+              (portRef CLK
+                (instanceRef U1))))
+          (net D
+            (joined
+              (portRef D)
+              (portRef D0
+                (instanceRef U1)))))))
+
+
+    (cell G_DC (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port CLK
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT))
+          (port C
+            (direction INPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef FD21
+                (libraryRef plsi))))
+          (net C
+            (joined
+              (portRef C)
+              (portRef CD
+                (instanceRef U1))))
+          (net Q
+            (joined
+              (portRef Q)
+              (portRef Q0
+                (instanceRef U1))))
+          (net CLK
+            (joined
+              (portRef CLK)
+              (portRef CLK
+                (instanceRef U1))))
+          (net D
+            (joined
+              (portRef D)
+              (portRef D0
+                (instanceRef U1)))))))
+
+
+    (cell G_DP (cellType GENERIC)
+      (view NetList (viewType NETLIST)
+        (interface
+          (port CLK
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT))
+          (port P
+            (direction INPUT))
+          (port D
+            (direction INPUT)))
+        (contents
+          (instance U1
+            (viewRef NetList
+              (cellRef FDB1
+                (libraryRef plsi))))
+          (net D
+            (joined
+              (portRef D)
+              (portRef D0
+                (instanceRef U1))))
+          (net P
+            (joined
+              (portRef P)
+              (portRef SD
+                (instanceRef U1))))
+          (net Q
+            (joined
+              (portRef Q)
+              (portRef Q0
+                (instanceRef U1))))
+          (net CLK
+            (joined
+              (portRef CLK)
+              (portRef CLK
+                (instanceRef U1)))))))
+
+
+    (cell PRINCIPAL
+      (cellType GENERIC)
+      (view V1
+        (viewType NETLIST)
+        (interface
+          (property VERIMODEL
+            (string "principal"))
+          (port GND
+            (direction INPUT))
+          (port VCC
+            (direction INPUT))
+          (port H
+            (direction INPUT))
+          (port set
+            (direction INPUT))
+          (port PH1
+            (direction OUTPUT))
+          (port PH2
+            (direction OUTPUT))
+          (port PH3
+            (direction OUTPUT))
+          (port PH4
+            (direction OUTPUT))
+          (port S0
+            (direction OUTPUT))
+          (port S1
+            (direction OUTPUT))
+          (port S2
+            (direction OUTPUT))
+          (port S3
+            (direction OUTPUT)))
+        (contents
+          (instance I24
+            (viewRef V1
+              (cellRef G_DP
+                (libraryRef regs))))
+          (instance I25
+            (viewRef V1
+              (cellRef G_DC
+                (libraryRef regs))))
+          (instance I26
+            (viewRef V1
+              (cellRef G_DC
+                (libraryRef regs))))
+          (instance I27
+            (viewRef V1
+              (cellRef G_DC
+                (libraryRef regs))))
+          (instance I30
+            (viewRef V1
+              (cellRef G_D
+                (libraryRef regs))))
+          (instance I31
+            (viewRef V1
+              (cellRef G_D
+                (libraryRef regs))))
+          (instance I28
+            (viewRef V1
+              (cellRef G_D
+                (libraryRef regs))))
+          (instance I32
+            (viewRef V1
+              (cellRef G_INV
+                (libraryRef gates))))
+          (instance I33
+            (viewRef V1
+              (cellRef G_INV
+                (libraryRef gates))))
+          (instance I7
+            (viewRef V1
+              (cellRef G_INV
+                (libraryRef gates))))
+          (instance I29
+            (viewRef V1
+              (cellRef G_INV
+                (libraryRef gates))))
+          (instance I34
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I35
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I36
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I37
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I23
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I20
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I21
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I22
+            (viewRef V1
+              (cellRef G_OUTPUT
+                (libraryRef iopads))))
+          (instance I12
+            (viewRef V1
+              (cellRef G_CLKBUF
+                (libraryRef iopads))))
+          (instance I42
+            (viewRef V1
+              (cellRef G_INPUT
+                (libraryRef iopads))))
+          (net GND
+            (joined
+              (globalPortRef GND)))
+          (net VCC
+            (joined
+              (globalPortRef VCC)))
+          (net S0
+            (joined
+              (portRef S0)
+              (portRef O
+                (instanceRef I34)))
+            (property LOCK
+              (string "41")))
+          (net S1
+            (joined
+              (portRef S1)
+              (portRef O
+                (instanceRef I37)))
+            (property LOCK
+              (string "42")))
+          (net S2
+            (joined
+              (portRef S2)
+              (portRef O
+                (instanceRef I36)))
+            (property LOCK
+              (string "43")))
+          (net S3
+            (joined
+              (portRef S3)
+              (portRef O
+                (instanceRef I35)))
+            (property LOCK
+              (string "44")))
+          (net set
+            (joined
+              (portRef set)
+              (portRef I
+                (instanceRef I42)))
+            (property LOCK
+              (string "3")))
+          (net PH1
+            (joined
+              (portRef PH1)
+              (portRef O
+                (instanceRef I23)))
+            (property LOCK
+              (string "26")))
+          (net PH2
+            (joined
+              (portRef PH2)
+              (portRef O
+                (instanceRef I22)))
+            (property LOCK
+              (string "29")))
+          (net PH3
+            (joined
+              (portRef PH3)
+              (portRef O
+                (instanceRef I21)))
+            (property LOCK
+              (string "30")))
+          (net PH4
+            (joined
+              (portRef PH4)
+              (portRef O
+                (instanceRef I20)))
+            (property LOCK
+              (string "25")))
+          (net Q3
+            (joined
+              (portRef Q
+                (instanceRef I26))
+              (portRef D
+                (instanceRef I24))
+              (portRef I
+                (instanceRef I34))
+              (portRef I
+                (instanceRef I23))))
+          (net Q2
+            (joined
+              (portRef Q
+                (instanceRef I25))
+              (portRef D
+                (instanceRef I26))
+              (portRef I
+                (instanceRef I37))
+              (portRef I
+                (instanceRef I22))))
+          (net Q1
+            (joined
+              (portRef I
+                (instanceRef I21))
+              (portRef Q
+                (instanceRef I27))
+              (portRef D
+                (instanceRef I25))
+              (portRef I
+                (instanceRef I36))))
+          (net Q0
+            (joined
+              (portRef I
+                (instanceRef I20))
+              (portRef Q
+                (instanceRef I24))
+              (portRef D
+                (instanceRef I27))
+              (portRef I
+                (instanceRef I35))))
+          (net N_41
+            (joined
+              (portRef O
+                (instanceRef I12))
+              (portRef CLK
+                (instanceRef I30))))
+          (net N_42
+            (joined
+              (portRef D
+                (instanceRef I30))
+              (portRef YN
+                (instanceRef I32))))
+          (net N_43
+            (joined
+              (portRef D
+                (instanceRef I31))
+              (portRef YN
+                (instanceRef I33))))
+          (net N_44
+            (joined
+              (portRef CLK
+                (instanceRef I31))
+              (portRef Q
+                (instanceRef I30))
+              (portRef A
+                (instanceRef I32))))
+          (net N_45
+            (joined
+              (portRef Q
+                (instanceRef I31))
+              (portRef A
+                (instanceRef I33))
+              (portRef CLK
+                (instanceRef I28))))
+          (net N_46
+            (joined
+              (portRef D
+                (instanceRef I28))
+              (portRef YN
+                (instanceRef I7))))
+          (net N_40
+            (joined
+              (portRef P
+                (instanceRef I24))
+              (portRef YN
+                (instanceRef I29))
+              (portRef C
+                (instanceRef I27))
+              (portRef C
+                (instanceRef I25))
+              (portRef C
+                (instanceRef I26))))
+          (net N_39
+            (joined
+              (portRef A
+                (instanceRef I29))
+              (portRef O
+                (instanceRef I42))))
+          (net N_18
+            (joined
+              (portRef Q
+                (instanceRef I28))
+              (portRef A
+                (instanceRef I7))
+              (portRef CLK
+                (instanceRef I24))
+              (portRef CLK
+                (instanceRef I27))
+              (portRef CLK
+                (instanceRef I25))
+              (portRef CLK
+                (instanceRef I26))))
+          (net H
+            (joined
+              (portRef H)
+              (portRef I
+                (instanceRef I12)))
+            (property LOCK
+              (string "11"))))))
+  )
+  (design PRINCIPAL
+    (cellRef PRINCIPAL
+      (libraryRef PRINCIPAL))))

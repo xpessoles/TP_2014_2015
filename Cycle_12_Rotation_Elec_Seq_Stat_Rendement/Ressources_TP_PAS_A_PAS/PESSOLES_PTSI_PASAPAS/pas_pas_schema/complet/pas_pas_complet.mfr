@@ -1,0 +1,62 @@
+Frequency Analysis Report:
+-------------------------
+
+Design Name: PAS_PAS_COMPLET
+Part Name: ispLSI1016-60LH44/883
+
+This report contains the maximum frequency at which the design
+can be operated. It also lists the path that determines the
+maximum frequency and the number of GLB levels. 
+The remaining internal register paths and their frequencies
+are also listed, if the source and the registers are driven
+by the same reference clock.
+
+
+Maximum Operating Frequency:    64 MHz
+
+The clock period is 15.70.
+Clock period = path delay + clock-to-output delay + setup time
+  path delay:              11.70
+  clock-to-output delay:   1.30
+  setup time:              2.70
+
+
+The following path determines the frequency: 
+
+  Startpoint: GLB_S2_PIN/Q0
+              (edge-triggered flip-flop)
+  Endpoint: GLB_S1_PIN/D0
+              (edge-triggered flip-flop)
+  No. of GLB Levels: 1
+
+Internal Register  Paths and Frequencies:
+
+  Source              Source                  Destination       Destination             Clock     Frequency   # of GLB     
+  Reference           Register                Reference         Register                Period      [MHz]     Levels       
+  Clock               Name                    Clock             Name                     [ns]     
+==----------------------------------------------------------------------------------------------------------------
+  GLB_N_44            GLB_N_45/Q0             GLB_N_45          GLB_N_18/CLK             24.50     ----     2    
+  H                   GLB_N_44/Q0             GLB_N_44          GLB_N_45/CLK             17.20     ----     1    
+  GLB_N_18            GLB_S2_PIN/Q0           GLB_N_18          GLB_S1_PIN/D0            15.70     64        1    
+  GLB_N_18            GLB_S0_PIN/Q0           GLB_N_18          GLB_S3_QB/D0             15.70     64        1    
+  GLB_N_45            GLB_N_18/Q0             GLB_N_45          GLB_N_18/D0              15.30     65        1    
+  H                   GLB_N_44/Q0             H                 GLB_N_44/D0              14.00     71        1    
+  GLB_N_44            GLB_N_45/Q0             GLB_N_44          GLB_N_45/D0              14.00     71        1    
+  GLB_N_18            GLB_S1_PIN/Q0           GLB_N_18          GLB_S0_PIN/D0            14.00     71        1    
+  GLB_N_18            GLB_S3_QB/Q0            GLB_N_18          GLB_S2_PIN/D0            14.00     71        1    
+  GLB_N_45            GLB_N_18/Q0             GLB_N_18          GLB_S0_PIN/CLK           11.90     ----     1    
+  GLB_N_45            GLB_N_18/Q0             GLB_N_18          GLB_S1_PIN/CLK           11.90     ----     1    
+  GLB_N_45            GLB_N_18/Q0             GLB_N_18          GLB_S2_PIN/CLK           11.90     ----     1    
+  GLB_N_45            GLB_N_18/Q0             GLB_N_18          GLB_S3_QB/CLK            11.90     ----     1    
+==-------------------------------------------------------------------------------------------
+Information for flip-flop:
+
+  Global reset-to-output delay:   3.30
+  Clock-to-output delay:          1.30
+  User reset-to-output delay:     3.30
+  Data-to-output delay:           0.00
+  Setup time:                     2.70
+  Hold time:                      4.70
+  Pulse-width time:               6.00
+
+

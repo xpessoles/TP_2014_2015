@@ -1,0 +1,5 @@
+-devfile "C:/ispLEVER_Classic1_8/ispcpld/data/lc1k/l1016_44h.dev"
+-lci decouverteisp.lct
+-touch decouverteisp.irs
+-src decouverteisp.tt2
+-type PLA

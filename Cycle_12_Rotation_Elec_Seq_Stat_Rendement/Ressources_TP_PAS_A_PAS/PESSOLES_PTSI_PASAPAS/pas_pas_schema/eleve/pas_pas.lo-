@@ -1,0 +1,28 @@
+ispEXPERT Compiler Release 1.8.00.04.29.14, May 20 2002 13:06:40
+
+Copyright (C) 1994-2000 by Lattice Semiconductor Corporation.
+All Rights Reserved.
+
+
+Design Process Management 
+
+Renaming existing log file to pas_pas.lo-
+Renaming existing parameter file to pas_pas.pa-
+Renaming existing rpt file to pas_pas.rp-
+
+Preprocessing design 'pas_pas'...
+
+
+
+Lattice EDIF Netlist Reader  Version 1.8.00.04.29.14 Wed May 20 11:43:34 2015
+
+Copyright (c) 1993 - 2000 by Lattice Semiconductor Corporation.
+All Rights Reserved.
+
+Writing laf netlist ...
+lafout: Warning: Net GND is not driving anything.
+lafout: Warning: Net VCC is not driving anything.
+
+Edif netlist reader completed successfully.
+
+

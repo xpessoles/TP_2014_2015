@@ -1,0 +1,16 @@
+// PART: 	ispLSI1016-60LH44/883
+// FORMAT: 	PINNAME		PINTYPE	LOCK	PULLUP	SLOWSLEW	OPENDRAIN	OUTDELAY	VOLTAGE	CRIT
+		H			-		11	-1		-1		-1		-1		-1		-1
+		set			-		3	-1		-1		-1		-1		-1		-1
+		PH1			-		26	-1		-1		-1		-1		-1		-1
+		PH2			-		29	-1		-1		-1		-1		-1		-1
+		PH3			-		30	-1		-1		-1		-1		-1		-1
+		PH4			-		25	-1		-1		-1		-1		-1		-1
+		S0			-		41	-1		-1		-1		-1		-1		-1
+		S1			-		42	-1		-1		-1		-1		-1		-1
+		S2			-		43	-1		-1		-1		-1		-1		-1
+		S3			-		44	-1		-1		-1		-1		-1		-1
+
+// FORMAT: 	NETNAME		CLK		PRESERVE	ECP	GROUP		XOR	ELP	ETP
+
+// FORMAT: 	SYMNAME		PROTECT	REGTYPE

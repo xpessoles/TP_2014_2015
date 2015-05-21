@@ -1,0 +1,12 @@
+#$ TOOL SCH2BLF 1.8.00.04 
+#$ TITLE testled.bls 
+#$ MODULE testled 
+#$ PINS 2  LED1 SW1
+#$ NODES 1 N_1 
+#$ INTERFACE g_input 2 I'i' O'o'
+#$ INTERFACE g_output 2 I'i' O'o'
+#$ PRIMITIVE I2 g_input 2 SW1 N_1
+#$ PRIMITIVE I1 g_output 2 N_1 LED1
+.model testled
+
+.end

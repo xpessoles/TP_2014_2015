@@ -1,0 +1,17 @@
+[LOCATION ASSIGNMENTS]
+LPH1=pin,37,-,-;
+LPH4=pin,40,-,-;
+LPH3=pin,39,-,-;
+LPH2=pin,38,-,-;
+S0=pin,41,-,-;
+S3=pin,44,-,-;
+S2=pin,43,-,-;
+S1=pin,42,-,-;
+PH1=pin,26,-,-;
+PH4=pin,25,-,-;
+PH3=pin,30,-,-;
+PH2=pin,29,-,-;
+H=pin,11,-,-;
+set=pin,3,-,-;
+sens=pin,9,-,-;
+

@@ -1,0 +1,500 @@
+-- VHDL netlist for principal_complet
+-- Date: Mon May 09 21:47:55 2011
+-- Copyright (c) Lattice Semiconductor Corporation
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+LIBRARY LAT_VITL; -- Lattice Vital library 
+USE LAT_VITL.vit_pkg.all;
+USE work.all;
+
+ENTITY principal_complet IS 
+    PORT (
+        XRESET : IN std_logic;
+        SET : IN std_logic;
+        SENS : IN std_logic;
+        H : IN std_logic;
+        S3 : OUT std_logic;
+        S2 : OUT std_logic;
+        S1 : OUT std_logic;
+        S0 : OUT std_logic;
+        PH4 : OUT std_logic;
+        PH3 : OUT std_logic;
+        PH2 : OUT std_logic;
+        PH1 : OUT std_logic;
+        LPH4 : OUT std_logic;
+        LPH3 : OUT std_logic;
+        LPH2 : OUT std_logic;
+        LPH1 : OUT std_logic
+    );
+END principal_complet;
+
+
+ARCHITECTURE principal_complet_STRUCTURE OF principal_complet IS
+SIGNAL VCC : std_logic := '1';
+SIGNAL GND : std_logic := '0';
+SIGNAL  N_18_ck2f, BUF_736_ck1f, L2L_KEYWD_RESETb, IO24_IBUFO,
+	 IO30_IBUFO, HX, IO23_OBUFI, S3_QB_iomux,
+	 IO22_OBUFI, S2_PIN_iomux, IO21_OBUFI, S1_PIN_iomux,
+	 IO20_OBUFI, S0_PIN_iomux, IO8_OBUFI, OR_749_iomux,
+	 IO13_OBUFI, OR_746_iomux, IO12_OBUFI, OR_743_iomux,
+	 IO9_OBUFI, OR_740_iomux, IO19_OBUFI, PH4_PIN_iomux,
+	 IO18_OBUFI, PH3_PIN_iomux, IO17_OBUFI, PH2_PIN_iomux,
+	 IO16_OBUFI, PH1_PIN_iomux, N_45, N_45_D0,
+	 A1_CLKP, A1_P4_xa, OR_740, OR_749,
+	 A1_G1, A1_F3, A1_F2, A1_P16,
+	 A1_P15, N_44_grp, A1_P12, A1_IN10,
+	 A1_P11, A1_IN12, A1_IN14B, A1_P10,
+	 A1_IN11B, A1_IN14, N_45_ffb, A1_P4,
+	 A1_IN16B, N_44, N_44_D0, A6_CLK,
+	 HX_clk0, A6_P4_xa, OR_746, OR_743,
+	 A6_G1, A6_F3, A6_F2, A6_P16,
+	 A6_P15, A6_P11, A6_IN13, A6_IN14,
+	 A6_P10, A6_IN10, A6_IN14B, N_44_ffb,
+	 A6_P4, A6_IN16B, N_18, N_18_D0,
+	 B0_CLK, PH4_PIN, PH3_PIN, B0_P8_xa,
+	 B0_P13_xa, BUF_736, B0_X0O, B0_G3,
+	 B0_G2, B0_F4, B0_F1, B0_F0,
+	 N_45_grp, B0_P13, B0_IN9, N_18_ffb,
+	 B0_P12, B0_IN16, B0_P8, B0_P7,
+	 B0_IN2, B0_P6, B0_IN5, B0_P3,
+	 B0_IN1, B0_IN3, S3_QB_grp, B0_P2,
+	 B0_IN1B, B0_IN4B, S3_QB, S2_PIN,
+	 S3_QB_D0, S2_PIN_D0, B2_CD, B2_CLK,
+	 B2_P0_xa, B2_P4_xa, PH2_PIN, PH1_PIN,
+	 B2_G1, B2_G0, B2_F3, B2_F2,
+	 B2_P16, B2_IN3, B2_P15, B2_P12,
+	 B2_IN7B, S1_PIN_grp, B2_P11, B2_IN1B,
+	 B2_IN2, S2_PIN_ffb, SENSX_grp, B2_P10,
+	 B2_IN1, B2_IN16, S3_QB_ffb, B2_P4,
+	 B2_IN17B, S0_PIN_grp, B2_P0, B2_IN3B,
+	 S1_PIN, S0_PIN, L2L_KEYWD_RESET_glbb, S1_PIN_D0,
+	 S0_PIN_D0, B3_CD, B3_CLK, B3_P8_xa,
+	 B3_P13_xa, B3_G3, B3_G2, S1_PIN_ffb,
+	 B3_P13, B3_IN16, SETX_grp, B3_P12,
+	 B3_IN7B, S2_PIN_grp, B3_P8, B3_IN5 : std_logic;
+
+
+  COMPONENT PGAND2
+    PORT (
+        A1 : IN std_logic;
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGAND2 use entity lat_vitl.PGAND2(behav);
+
+  COMPONENT PGBUFI
+    PORT (
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGBUFI use entity lat_vitl.PGBUFI(behav);
+
+  COMPONENT PGORF72
+    PORT (
+        A1 : IN std_logic;
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGORF72 use entity lat_vitl.PGORF72(behav);
+
+  COMPONENT PGXOR2
+    PORT (
+        A1 : IN std_logic;
+        A0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGXOR2 use entity lat_vitl.PGXOR2(behav);
+
+  COMPONENT PGDFFR
+    PORT (
+        RNESET : IN std_logic;
+        CD : IN std_logic;
+        CLK : IN std_logic;
+        D0 : IN std_logic;
+        Q0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGDFFR use entity lat_vitl.PGDFFR(behav);
+
+  COMPONENT PGINVI
+    PORT (
+        A0 : IN std_logic;
+        ZN0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PGINVI use entity lat_vitl.PGINVI(behav);
+
+  COMPONENT PXIN
+    PORT (
+        XI0 : IN std_logic;
+        Z0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PXIN use entity lat_vitl.PXIN(behav);
+
+  COMPONENT PXOUT
+    PORT (
+        A0 : IN std_logic;
+        XO0 : OUT std_logic
+    );
+  END COMPONENT;
+  for all :  PXOUT use entity lat_vitl.PXOUT(behav);
+
+BEGIN
+
+GLB_A1_P16 : PGAND2
+	PORT MAP (Z0 => A1_P16, A1 => A1_IN12, A0 => A1_IN14);
+GLB_A1_P15 : PGAND2
+	PORT MAP (Z0 => A1_P15, A1 => A1_IN11B, A0 => A1_IN14B);
+GLB_A1_P12 : PGBUFI
+	PORT MAP (Z0 => A1_P12, A0 => A1_IN10);
+GLB_A1_P11 : PGAND2
+	PORT MAP (Z0 => A1_P11, A1 => A1_IN12, A0 => A1_IN14B);
+GLB_A1_P10 : PGAND2
+	PORT MAP (Z0 => A1_P10, A1 => A1_IN11B, A0 => A1_IN14);
+GLB_A1_P4 : PGBUFI
+	PORT MAP (Z0 => A1_P4, A0 => A1_IN16B);
+GLB_A1_G1 : PGBUFI
+	PORT MAP (Z0 => A1_G1, A0 => GND);
+GLB_A1_F3 : PGORF72
+	PORT MAP (Z0 => A1_F3, A1 => A1_P15, A0 => A1_P16);
+GLB_A1_F2 : PGORF72
+	PORT MAP (Z0 => A1_F2, A1 => A1_P10, A0 => A1_P11);
+GLB_A1_CLKP : PGBUFI
+	PORT MAP (Z0 => A1_CLKP, A0 => A1_P12);
+GLB_A1_P4_xa : PGBUFI
+	PORT MAP (Z0 => A1_P4_xa, A0 => A1_P4);
+GLB_OR_740 : PGBUFI
+	PORT MAP (Z0 => OR_740, A0 => A1_F2);
+GLB_OR_749 : PGBUFI
+	PORT MAP (Z0 => OR_749, A0 => A1_F3);
+GLB_A1_IN10 : PGBUFI
+	PORT MAP (Z0 => A1_IN10, A0 => N_44_grp);
+GLB_A1_IN12 : PGBUFI
+	PORT MAP (Z0 => A1_IN12, A0 => S0_PIN_grp);
+GLB_A1_IN14 : PGBUFI
+	PORT MAP (Z0 => A1_IN14, A0 => SENSX_grp);
+GLB_N_45_D0 : PGXOR2
+	PORT MAP (Z0 => N_45_D0, A1 => A1_P4_xa, A0 => A1_G1);
+GLB_N_45 : PGDFFR
+	PORT MAP (Q0 => N_45, RNESET => L2L_KEYWD_RESET_glbb, CD => GND, CLK => A1_CLKP, 
+	D0 => N_45_D0);
+GLB_A1_IN14B : PGINVI
+	PORT MAP (ZN0 => A1_IN14B, A0 => SENSX_grp);
+GLB_A1_IN11B : PGINVI
+	PORT MAP (ZN0 => A1_IN11B, A0 => S3_QB_grp);
+GLB_A1_IN16B : PGINVI
+	PORT MAP (ZN0 => A1_IN16B, A0 => N_45_ffb);
+GLB_A6_P16 : PGAND2
+	PORT MAP (Z0 => A6_P16, A1 => A6_IN13, A0 => A6_IN14B);
+GLB_A6_P15 : PGAND2
+	PORT MAP (Z0 => A6_P15, A1 => A6_IN10, A0 => A6_IN14);
+GLB_A6_P11 : PGAND2
+	PORT MAP (Z0 => A6_P11, A1 => A6_IN13, A0 => A6_IN14);
+GLB_A6_P10 : PGAND2
+	PORT MAP (Z0 => A6_P10, A1 => A6_IN10, A0 => A6_IN14B);
+GLB_A6_P4 : PGBUFI
+	PORT MAP (Z0 => A6_P4, A0 => A6_IN16B);
+GLB_A6_G1 : PGBUFI
+	PORT MAP (Z0 => A6_G1, A0 => GND);
+GLB_A6_F3 : PGORF72
+	PORT MAP (Z0 => A6_F3, A1 => A6_P15, A0 => A6_P16);
+GLB_A6_F2 : PGORF72
+	PORT MAP (Z0 => A6_F2, A1 => A6_P10, A0 => A6_P11);
+GLB_A6_CLK : PGBUFI
+	PORT MAP (Z0 => A6_CLK, A0 => HX_clk0);
+GLB_A6_P4_xa : PGBUFI
+	PORT MAP (Z0 => A6_P4_xa, A0 => A6_P4);
+GLB_OR_746 : PGBUFI
+	PORT MAP (Z0 => OR_746, A0 => A6_F2);
+GLB_OR_743 : PGBUFI
+	PORT MAP (Z0 => OR_743, A0 => A6_F3);
+GLB_A6_IN14 : PGBUFI
+	PORT MAP (Z0 => A6_IN14, A0 => SENSX_grp);
+GLB_A6_IN13 : PGBUFI
+	PORT MAP (Z0 => A6_IN13, A0 => S1_PIN_grp);
+GLB_A6_IN10 : PGBUFI
+	PORT MAP (Z0 => A6_IN10, A0 => S2_PIN_grp);
+GLB_N_44_D0 : PGXOR2
+	PORT MAP (Z0 => N_44_D0, A1 => A6_P4_xa, A0 => A6_G1);
+GLB_N_44 : PGDFFR
+	PORT MAP (Q0 => N_44, RNESET => L2L_KEYWD_RESET_glbb, CD => GND, CLK => A6_CLK, 
+	D0 => N_44_D0);
+GLB_A6_IN14B : PGINVI
+	PORT MAP (ZN0 => A6_IN14B, A0 => SENSX_grp);
+GLB_A6_IN16B : PGINVI
+	PORT MAP (ZN0 => A6_IN16B, A0 => N_44_ffb);
+GLB_B0_P13 : PGBUFI
+	PORT MAP (Z0 => B0_P13, A0 => B0_IN9);
+GLB_B0_P12 : PGBUFI
+	PORT MAP (Z0 => B0_P12, A0 => B0_IN16);
+GLB_B0_P8 : PGBUFI
+	PORT MAP (Z0 => B0_P8, A0 => VCC);
+GLB_B0_P7 : PGAND2
+	PORT MAP (Z0 => B0_P7, A1 => B0_IN1, A0 => B0_IN2);
+GLB_B0_P6 : PGAND2
+	PORT MAP (Z0 => B0_P6, A1 => B0_IN1B, A0 => B0_IN5);
+GLB_B0_P3 : PGAND2
+	PORT MAP (Z0 => B0_P3, A1 => B0_IN1, A0 => B0_IN3);
+GLB_B0_P2 : PGAND2
+	PORT MAP (Z0 => B0_P2, A1 => B0_IN1B, A0 => B0_IN4B);
+GLB_B0_G3 : PGBUFI
+	PORT MAP (Z0 => B0_G3, A0 => GND);
+GLB_B0_G2 : PGBUFI
+	PORT MAP (Z0 => B0_G2, A0 => B0_F4);
+GLB_B0_F4 : PGBUFI
+	PORT MAP (Z0 => B0_F4, A0 => B0_P12);
+GLB_B0_F1 : PGORF72
+	PORT MAP (Z0 => B0_F1, A1 => B0_P6, A0 => B0_P7);
+GLB_B0_F0 : PGORF72
+	PORT MAP (Z0 => B0_F0, A1 => B0_P2, A0 => B0_P3);
+GLB_B0_CLK : PGBUFI
+	PORT MAP (Z0 => B0_CLK, A0 => BUF_736_ck1f);
+GLB_PH4_PIN : PGBUFI
+	PORT MAP (Z0 => PH4_PIN, A0 => B0_F0);
+GLB_PH3_PIN : PGBUFI
+	PORT MAP (Z0 => PH3_PIN, A0 => B0_F1);
+GLB_B0_P8_xa : PGBUFI
+	PORT MAP (Z0 => B0_P8_xa, A0 => B0_P8);
+GLB_B0_P13_xa : PGBUFI
+	PORT MAP (Z0 => B0_P13_xa, A0 => B0_P13);
+GLB_BUF_736 : PGBUFI
+	PORT MAP (Z0 => BUF_736, A0 => B0_X0O);
+GLB_B0_IN9 : PGBUFI
+	PORT MAP (Z0 => B0_IN9, A0 => N_45_grp);
+GLB_B0_IN16 : PGBUFI
+	PORT MAP (Z0 => B0_IN16, A0 => N_18_ffb);
+GLB_B0_IN2 : PGBUFI
+	PORT MAP (Z0 => B0_IN2, A0 => S1_PIN_grp);
+GLB_B0_IN5 : PGBUFI
+	PORT MAP (Z0 => B0_IN5, A0 => S2_PIN_grp);
+GLB_B0_IN3 : PGBUFI
+	PORT MAP (Z0 => B0_IN3, A0 => S0_PIN_grp);
+GLB_B0_IN1 : PGBUFI
+	PORT MAP (Z0 => B0_IN1, A0 => SENSX_grp);
+GLB_N_18_D0 : PGXOR2
+	PORT MAP (Z0 => N_18_D0, A1 => B0_P8_xa, A0 => B0_G2);
+GLB_B0_X0O : PGXOR2
+	PORT MAP (Z0 => B0_X0O, A1 => B0_P13_xa, A0 => B0_G3);
+GLB_N_18 : PGDFFR
+	PORT MAP (Q0 => N_18, RNESET => L2L_KEYWD_RESET_glbb, CD => GND, CLK => B0_CLK, 
+	D0 => N_18_D0);
+GLB_B0_IN4B : PGINVI
+	PORT MAP (ZN0 => B0_IN4B, A0 => S3_QB_grp);
+GLB_B0_IN1B : PGINVI
+	PORT MAP (ZN0 => B0_IN1B, A0 => SENSX_grp);
+GLB_B2_P16 : PGAND2
+	PORT MAP (Z0 => B2_P16, A1 => B2_IN1B, A0 => B2_IN3);
+GLB_B2_P15 : PGAND2
+	PORT MAP (Z0 => B2_P15, A1 => B2_IN1, A0 => B2_IN17B);
+GLB_B2_P12 : PGBUFI
+	PORT MAP (Z0 => B2_P12, A0 => B2_IN7B);
+GLB_B2_P11 : PGAND2
+	PORT MAP (Z0 => B2_P11, A1 => B2_IN1B, A0 => B2_IN2);
+GLB_B2_P10 : PGAND2
+	PORT MAP (Z0 => B2_P10, A1 => B2_IN1, A0 => B2_IN16);
+GLB_B2_P4 : PGBUFI
+	PORT MAP (Z0 => B2_P4, A0 => B2_IN17B);
+GLB_B2_P0 : PGBUFI
+	PORT MAP (Z0 => B2_P0, A0 => B2_IN3B);
+GLB_B2_G1 : PGBUFI
+	PORT MAP (Z0 => B2_G1, A0 => GND);
+GLB_B2_G0 : PGBUFI
+	PORT MAP (Z0 => B2_G0, A0 => GND);
+GLB_B2_F3 : PGORF72
+	PORT MAP (Z0 => B2_F3, A1 => B2_P15, A0 => B2_P16);
+GLB_B2_F2 : PGORF72
+	PORT MAP (Z0 => B2_F2, A1 => B2_P10, A0 => B2_P11);
+GLB_B2_CD : PGBUFI
+	PORT MAP (Z0 => B2_CD, A0 => B2_P12);
+GLB_B2_CLK : PGBUFI
+	PORT MAP (Z0 => B2_CLK, A0 => N_18_ck2f);
+GLB_B2_P0_xa : PGBUFI
+	PORT MAP (Z0 => B2_P0_xa, A0 => B2_P0);
+GLB_B2_P4_xa : PGBUFI
+	PORT MAP (Z0 => B2_P4_xa, A0 => B2_P4);
+GLB_PH2_PIN : PGBUFI
+	PORT MAP (Z0 => PH2_PIN, A0 => B2_F2);
+GLB_PH1_PIN : PGBUFI
+	PORT MAP (Z0 => PH1_PIN, A0 => B2_F3);
+GLB_B2_IN3 : PGBUFI
+	PORT MAP (Z0 => B2_IN3, A0 => S0_PIN_grp);
+GLB_B2_IN2 : PGBUFI
+	PORT MAP (Z0 => B2_IN2, A0 => S1_PIN_grp);
+GLB_B2_IN16 : PGBUFI
+	PORT MAP (Z0 => B2_IN16, A0 => S2_PIN_ffb);
+GLB_B2_IN1 : PGBUFI
+	PORT MAP (Z0 => B2_IN1, A0 => SENSX_grp);
+GLB_S3_QB_D0 : PGXOR2
+	PORT MAP (Z0 => S3_QB_D0, A1 => B2_P0_xa, A0 => B2_G0);
+GLB_S2_PIN_D0 : PGXOR2
+	PORT MAP (Z0 => S2_PIN_D0, A1 => B2_P4_xa, A0 => B2_G1);
+GLB_S3_QB : PGDFFR
+	PORT MAP (Q0 => S3_QB, RNESET => L2L_KEYWD_RESET_glbb, CD => B2_CD, CLK => B2_CLK, 
+	D0 => S3_QB_D0);
+GLB_S2_PIN : PGDFFR
+	PORT MAP (Q0 => S2_PIN, RNESET => L2L_KEYWD_RESET_glbb, CD => B2_CD, CLK => B2_CLK, 
+	D0 => S2_PIN_D0);
+GLB_B2_IN7B : PGINVI
+	PORT MAP (ZN0 => B2_IN7B, A0 => SETX_grp);
+GLB_B2_IN1B : PGINVI
+	PORT MAP (ZN0 => B2_IN1B, A0 => SENSX_grp);
+GLB_B2_IN17B : PGINVI
+	PORT MAP (ZN0 => B2_IN17B, A0 => S3_QB_ffb);
+GLB_B2_IN3B : PGINVI
+	PORT MAP (ZN0 => B2_IN3B, A0 => S0_PIN_grp);
+GLB_B3_P13 : PGBUFI
+	PORT MAP (Z0 => B3_P13, A0 => B3_IN16);
+GLB_B3_P12 : PGBUFI
+	PORT MAP (Z0 => B3_P12, A0 => B3_IN7B);
+GLB_B3_P8 : PGBUFI
+	PORT MAP (Z0 => B3_P8, A0 => B3_IN5);
+GLB_B3_G3 : PGBUFI
+	PORT MAP (Z0 => B3_G3, A0 => GND);
+GLB_B3_G2 : PGBUFI
+	PORT MAP (Z0 => B3_G2, A0 => GND);
+GLB_B3_CD : PGBUFI
+	PORT MAP (Z0 => B3_CD, A0 => B3_P12);
+GLB_B3_CLK : PGBUFI
+	PORT MAP (Z0 => B3_CLK, A0 => N_18_ck2f);
+GLB_B3_P8_xa : PGBUFI
+	PORT MAP (Z0 => B3_P8_xa, A0 => B3_P8);
+GLB_B3_P13_xa : PGBUFI
+	PORT MAP (Z0 => B3_P13_xa, A0 => B3_P13);
+GLB_B3_IN16 : PGBUFI
+	PORT MAP (Z0 => B3_IN16, A0 => S1_PIN_ffb);
+GLB_B3_IN5 : PGBUFI
+	PORT MAP (Z0 => B3_IN5, A0 => S2_PIN_grp);
+GLB_S1_PIN_D0 : PGXOR2
+	PORT MAP (Z0 => S1_PIN_D0, A1 => B3_P8_xa, A0 => B3_G2);
+GLB_S0_PIN_D0 : PGXOR2
+	PORT MAP (Z0 => S0_PIN_D0, A1 => B3_P13_xa, A0 => B3_G3);
+GLB_S1_PIN : PGDFFR
+	PORT MAP (Q0 => S1_PIN, RNESET => L2L_KEYWD_RESET_glbb, CD => B3_CD, CLK => B3_CLK, 
+	D0 => S1_PIN_D0);
+GLB_S0_PIN : PGDFFR
+	PORT MAP (Q0 => S0_PIN, RNESET => L2L_KEYWD_RESET_glbb, CD => B3_CD, CLK => B3_CLK, 
+	D0 => S0_PIN_D0);
+GLB_B3_IN7B : PGINVI
+	PORT MAP (ZN0 => B3_IN7B, A0 => SETX_grp);
+IOC_L2L_KEYWD_RESET : PXIN
+	PORT MAP (Z0 => L2L_KEYWD_RESETb, XI0 => XRESET);
+IOC_IO24_IBUFO : PXIN
+	PORT MAP (Z0 => IO24_IBUFO, XI0 => SET);
+IOC_IO30_IBUFO : PXIN
+	PORT MAP (Z0 => IO30_IBUFO, XI0 => SENS);
+IOC_HX : PXIN
+	PORT MAP (Z0 => HX, XI0 => H);
+IOC_S3 : PXOUT
+	PORT MAP (XO0 => S3, A0 => IO23_OBUFI);
+IOC_IO23_OBUFI : PGINVI
+	PORT MAP (ZN0 => IO23_OBUFI, A0 => S3_QB_iomux);
+IOC_S2 : PXOUT
+	PORT MAP (XO0 => S2, A0 => IO22_OBUFI);
+IOC_IO22_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO22_OBUFI, A0 => S2_PIN_iomux);
+IOC_S1 : PXOUT
+	PORT MAP (XO0 => S1, A0 => IO21_OBUFI);
+IOC_IO21_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO21_OBUFI, A0 => S1_PIN_iomux);
+IOC_S0 : PXOUT
+	PORT MAP (XO0 => S0, A0 => IO20_OBUFI);
+IOC_IO20_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO20_OBUFI, A0 => S0_PIN_iomux);
+IOC_PH4 : PXOUT
+	PORT MAP (XO0 => PH4, A0 => IO8_OBUFI);
+IOC_IO8_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO8_OBUFI, A0 => OR_749_iomux);
+IOC_PH3 : PXOUT
+	PORT MAP (XO0 => PH3, A0 => IO13_OBUFI);
+IOC_IO13_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO13_OBUFI, A0 => OR_746_iomux);
+IOC_PH2 : PXOUT
+	PORT MAP (XO0 => PH2, A0 => IO12_OBUFI);
+IOC_IO12_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO12_OBUFI, A0 => OR_743_iomux);
+IOC_PH1 : PXOUT
+	PORT MAP (XO0 => PH1, A0 => IO9_OBUFI);
+IOC_IO9_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO9_OBUFI, A0 => OR_740_iomux);
+IOC_LPH4 : PXOUT
+	PORT MAP (XO0 => LPH4, A0 => IO19_OBUFI);
+IOC_IO19_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO19_OBUFI, A0 => PH4_PIN_iomux);
+IOC_LPH3 : PXOUT
+	PORT MAP (XO0 => LPH3, A0 => IO18_OBUFI);
+IOC_IO18_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO18_OBUFI, A0 => PH3_PIN_iomux);
+IOC_LPH2 : PXOUT
+	PORT MAP (XO0 => LPH2, A0 => IO17_OBUFI);
+IOC_IO17_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO17_OBUFI, A0 => PH2_PIN_iomux);
+IOC_LPH1 : PXOUT
+	PORT MAP (XO0 => LPH1, A0 => IO16_OBUFI);
+IOC_IO16_OBUFI : PGBUFI
+	PORT MAP (Z0 => IO16_OBUFI, A0 => PH1_PIN_iomux);
+GRP_OR_749_iomux : PGBUFI
+	PORT MAP (Z0 => OR_749_iomux, A0 => OR_749);
+GRP_OR_740_iomux : PGBUFI
+	PORT MAP (Z0 => OR_740_iomux, A0 => OR_740);
+GRP_N_45_ffb : PGBUFI
+	PORT MAP (Z0 => N_45_ffb, A0 => N_45);
+GRP_N_45_grp : PGBUFI
+	PORT MAP (Z0 => N_45_grp, A0 => N_45);
+GRP_N_44_grp : PGBUFI
+	PORT MAP (Z0 => N_44_grp, A0 => N_44);
+GRP_N_44_ffb : PGBUFI
+	PORT MAP (Z0 => N_44_ffb, A0 => N_44);
+GRP_S0_PIN_grp : PGBUFI
+	PORT MAP (Z0 => S0_PIN_grp, A0 => S0_PIN);
+GRP_S0_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => S0_PIN_iomux, A0 => S0_PIN);
+GRP_S3_QB_grp : PGBUFI
+	PORT MAP (Z0 => S3_QB_grp, A0 => S3_QB);
+GRP_S3_QB_ffb : PGBUFI
+	PORT MAP (Z0 => S3_QB_ffb, A0 => S3_QB);
+GRP_S3_QB_iomux : PGBUFI
+	PORT MAP (Z0 => S3_QB_iomux, A0 => S3_QB);
+GRP_SENSX_grp : PGBUFI
+	PORT MAP (Z0 => SENSX_grp, A0 => IO30_IBUFO);
+GRP_OR_746_iomux : PGBUFI
+	PORT MAP (Z0 => OR_746_iomux, A0 => OR_746);
+GRP_OR_743_iomux : PGBUFI
+	PORT MAP (Z0 => OR_743_iomux, A0 => OR_743);
+GRP_S1_PIN_grp : PGBUFI
+	PORT MAP (Z0 => S1_PIN_grp, A0 => S1_PIN);
+GRP_S1_PIN_ffb : PGBUFI
+	PORT MAP (Z0 => S1_PIN_ffb, A0 => S1_PIN);
+GRP_S1_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => S1_PIN_iomux, A0 => S1_PIN);
+GRP_S2_PIN_ffb : PGBUFI
+	PORT MAP (Z0 => S2_PIN_ffb, A0 => S2_PIN);
+GRP_S2_PIN_grp : PGBUFI
+	PORT MAP (Z0 => S2_PIN_grp, A0 => S2_PIN);
+GRP_S2_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => S2_PIN_iomux, A0 => S2_PIN);
+GRP_HX_clk0 : PXIN
+	PORT MAP (Z0 => HX_clk0, XI0 => HX);
+GRP_PH4_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => PH4_PIN_iomux, A0 => PH4_PIN);
+GRP_PH3_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => PH3_PIN_iomux, A0 => PH3_PIN);
+GRP_N_18_ffb : PGBUFI
+	PORT MAP (Z0 => N_18_ffb, A0 => N_18);
+GRP_N_18_ck2f : PGBUFI
+	PORT MAP (Z0 => N_18_ck2f, A0 => N_18);
+GRP_BUF_736_ck1f : PGBUFI
+	PORT MAP (Z0 => BUF_736_ck1f, A0 => BUF_736);
+GRP_PH2_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => PH2_PIN_iomux, A0 => PH2_PIN);
+GRP_PH1_PIN_iomux : PGBUFI
+	PORT MAP (Z0 => PH1_PIN_iomux, A0 => PH1_PIN);
+GRP_SETX_grp : PGBUFI
+	PORT MAP (Z0 => SETX_grp, A0 => IO24_IBUFO);
+GRP_L2L_KEYWD_RESET_glb : PXIN
+	PORT MAP (Z0 => L2L_KEYWD_RESET_glbb, XI0 => L2L_KEYWD_RESETb);
+END principal_complet_STRUCTURE;

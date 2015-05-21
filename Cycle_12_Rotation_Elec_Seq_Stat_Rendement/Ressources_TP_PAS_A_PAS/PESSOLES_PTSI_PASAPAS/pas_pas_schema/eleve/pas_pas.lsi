@@ -1,0 +1,11 @@
+[LOCATION ASSIGNMENTS]
+H=pin, 11,-,-,-;
+set=pin, 3,-,-,-;
+PH1=pin, 26,-,-,-;
+PH2=pin, 29,-,-,-;
+PH3=pin, 30,-,-,-;
+PH4=pin, 25,-,-,-;
+S0=pin, 41,-,-,-;
+S1=pin, 42,-,-,-;
+S2=pin, 43,-,-,-;
+S3=pin, 44,-,-,-;

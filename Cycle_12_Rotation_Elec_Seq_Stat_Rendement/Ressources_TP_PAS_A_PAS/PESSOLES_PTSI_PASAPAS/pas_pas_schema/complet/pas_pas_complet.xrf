@@ -1,0 +1,17 @@
+ispLEVER 6.1.01.55.12.07.SP2007.01 Signal Name Cross Reference File
+Copyright(C), 1992-2007, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design 'principal_complet' created Mon May 09 21:47:48 2011
+
+Title:  principal_complet.bls 
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+
+ *** Shortened names not required for this design. ***

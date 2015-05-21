@@ -1,0 +1,123 @@
+
+[Device]
+Family = plsi1k;
+PartNumber = ispLSI1016-60LH44/883;
+Package = 44JLCC;
+PartType = ispLSI1016;
+Speed = 60;
+Operating_condition = MIL;
+Status = Production;
+
+[Revision]
+Parent = lc1k.lci;
+DATE = 2002;
+TIME = 0:00:00;
+Source_Format = Schematic_VHDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+H = pin, 11, -, -, -;
+set = pin, 3, -, -, -;
+PH1 = pin, 26, -, -, -;
+PH2 = pin, 29, -, -, -;
+PH3 = pin, 30, -, -, -;
+PH4 = pin, 25, -, -, -;
+S0 = pin, 41, -, -, -;
+S1 = pin, 42, -, -, -;
+S2 = pin, 43, -, -, -;
+S3 = pin, 44, -, -, -;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[symbol/module attribute]
+layer = OFF;
+
+[symbol/module attribute list]
+
+[Node attribute list]

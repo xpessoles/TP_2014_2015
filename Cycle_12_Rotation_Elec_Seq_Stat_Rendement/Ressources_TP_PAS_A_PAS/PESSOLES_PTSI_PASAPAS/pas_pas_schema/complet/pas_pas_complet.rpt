@@ -1,0 +1,549 @@
+ispEXPERT Compiler Release 6.1.01.55.12.07, May 20 2002 13:06:40
+
+
+Design Parameters
+-----------------
+
+EFFORT:                         MEDIUM (2)
+IGNORE_FIXED_PIN:               OFF
+MAX_GLB_IN:                     16
+MAX_GLB_OUT:                    4
+OUTPUT_FORM:                    VERILOG, VHDL
+OS_VERSION:                     Windows NT 5.1
+PARAM_FILE:                     'd:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\ispxpert'
+PIN_FILE:                       'd:\mes documents\laurent\prof\_tsi\tp\tp_série_7_logique\pas_pas_schema\complet\pas_pas_complet.xpn'
+STRATEGY:                       DELAY
+TIMING_ANALYZER:                ON 
+USE_GLOBAL_RESET:               ON
+
+
+Design Specification
+--------------------
+
+Design:                         pas_pas_complet
+Part:                           ispLSI1016-60LH44/883
+
+
+ISP:                            ON
+ISP_EXCEPT_Y2:                  OFF
+PULL:                           UP
+SECURITY:                       OFF
+Y1_AS_RESET:                    ON
+
+
+Number of Critical Pins:        0
+Number of Free Pins:            0
+Number of Locked Pins:          15
+Number of Reserved Pins:        0
+
+
+Input Pins
+
+    Pin Name                Pin Attribute
+
+        H                       LOCK 11, PULLUP
+        SENS                    LOCK 9, PULLUP
+        SET                     LOCK 3, PULLUP
+
+
+Output Pins
+
+    Pin Name                Pin Attribute
+
+        LPH1                    LOCK 37, PULLUP
+        LPH2                    LOCK 38, PULLUP
+        LPH3                    LOCK 39, PULLUP
+        LPH4                    LOCK 40, PULLUP
+        PH1                     LOCK 26, PULLUP
+        PH2                     LOCK 29, PULLUP
+        PH3                     LOCK 30, PULLUP
+        PH4                     LOCK 25, PULLUP
+        S0                      LOCK 41, PULLUP
+        S1                      LOCK 42, PULLUP
+        S2                      LOCK 43, PULLUP
+        S3                      LOCK 44, PULLUP
+
+
+Pre-Route Design Statistics
+---------------------------
+
+Number of Macrocells:           16
+Number of GLBs:                 5
+Number of I/Os:                 14
+Number of Nets:                 16
+
+Number of Free Inputs:          0
+Number of Free Outputs:         0
+Number of Free Three-States:    0
+Number of Free Bidi's:          0
+
+Number of Locked Input IOCs:    2
+Number of Locked DIs:           0
+Number of Locked Outputs:       12
+Number of Locked Three-States:  0
+Number of Locked Bidi's:        0
+
+Number of CRIT Outputs:         0
+Number of Global OEs:           0
+Number of External Clocks:      1
+
+
+GLB Utilization (Out of 16):	31%
+I/O Utilization (Out of 33):	42%
+Net Utilization (Out of 97):	16%
+
+
+Nets with Fanout of  1:         8
+Nets with Fanout of  2:         3
+Nets with Fanout of  4:         3
+Nets with Fanout of  5:         2
+
+Average Fanout per Net:         2.25
+
+
+GLBs with  3 Input(s):          1
+GLBs with  4 Input(s):          1
+GLBs with  5 Input(s):          1
+GLBs with  6 Input(s):          1
+GLBs with  7 Input(s):          1
+
+Average Inputs per GLB:         5.00
+
+
+GLBs with  2 Output(s):         1
+GLBs with  3 Output(s):         2
+GLBs with  4 Output(s):         2
+
+Average Outputs per GLB:        3.20
+
+
+Number of GLB Registers:        7
+Number of IOC Registers:        0
+
+
+Post-Route Design Implementation
+--------------------------------
+
+Number of Macrocells:		16
+Number of GLBs:			5
+Number of IOCs:			14
+Number of DIs:			0
+Number of GLB Levels:		1
+
+
+Clock GLB glb00, B0
+
+    7 Input(s)
+        (glb00.O1, N_18, I16), (glb03.O2, N_45, I9), (glb02.O0, 
+        S0_PIN, I3), (glb02.O1, S1_PIN, I2), (glb01.O2, S2_PIN, I5), 
+        (glb01.O3, S3_QB, I4), (SENS.O, SENSX, I1)
+    4 Output(s)
+        (PH4_PIN, O3), (PH3_PIN, O2), (N_18, O1), (BUF_736, O0)
+    6 Product Term(s)
+
+    Output PH4_PIN
+
+        3 Input(s)
+            S3_QB, SENSX, S0_PIN
+        1 Fanout(s)
+            LPH4.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        PH4_PIN = S0_PIN & SENSX
+            # !S3_QB & !SENSX
+
+    Output PH3_PIN
+
+        3 Input(s)
+            S1_PIN, SENSX, S2_PIN
+        1 Fanout(s)
+            LPH3.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        PH3_PIN = S1_PIN & SENSX
+            # S2_PIN & !SENSX
+
+    Output N_18
+
+        1 Input(s)
+            N_18
+        3 Fanout(s)
+            glb00.I16, glb01.CLK2, glb02.CLK2
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        N_18.D = (N_18)
+            $ VCC
+        N_18.C = BUF_736
+        N_18.R = 
+    Output BUF_736
+
+        1 Input(s)
+            N_45
+        1 Fanout(s)
+            glb00.CLK1
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        BUF_736 = N_45
+
+
+GLB glb01, B2
+
+    6 Input(s)
+        (glb02.O0, S0_PIN, I3), (glb02.O1, S1_PIN, I2), (glb01.O2, 
+        S2_PIN, I16), (glb01.O3, S3_QB, I17), (SENS.O, SENSX, I1), 
+        (SET.O, SETX, I7)
+    4 Output(s)
+        (S3_QB, O3), (S2_PIN, O2), (PH2_PIN, O1), (PH1_PIN, O0)
+    7 Product Term(s)
+
+    Output S3_QB
+
+        2 Input(s)
+            SETX, S0_PIN
+        4 Fanout(s)
+            glb03.I11, glb00.I4, glb01.I17, S3.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        S3_QB.D = !S0_PIN
+        S3_QB.C = N_18
+        S3_QB.R = !SETX
+
+    Output S2_PIN
+
+        2 Input(s)
+            SETX, S3_QB
+        5 Fanout(s)
+            glb04.I10, glb00.I5, glb01.I16, glb02.I5, S2.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        S2_PIN.D = !S3_QB
+        S2_PIN.C = N_18
+        S2_PIN.R = !SETX
+
+    Output PH2_PIN
+
+        3 Input(s)
+            S1_PIN, SENSX, S2_PIN
+        1 Fanout(s)
+            LPH2.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        PH2_PIN = S1_PIN & !SENSX
+            # S2_PIN & SENSX
+
+    Output PH1_PIN
+
+        3 Input(s)
+            S3_QB, SENSX, S0_PIN
+        1 Fanout(s)
+            LPH1.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        PH1_PIN = S0_PIN & !SENSX
+            # !S3_QB & SENSX
+
+
+GLB glb02, B3
+
+    3 Input(s)
+        (glb02.O1, S1_PIN, I16), (glb01.O2, S2_PIN, I5), (SET.O, 
+        SETX, I7)
+    2 Output(s)
+        (S1_PIN, O1), (S0_PIN, O0)
+    3 Product Term(s)
+
+    Output S1_PIN
+
+        2 Input(s)
+            SETX, S2_PIN
+        5 Fanout(s)
+            glb04.I13, glb00.I2, glb01.I2, glb02.I16, S1.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        S1_PIN.D = S2_PIN
+        S1_PIN.C = N_18
+        S1_PIN.R = !SETX
+
+    Output S0_PIN
+
+        2 Input(s)
+            SETX, S1_PIN
+        4 Fanout(s)
+            glb03.I12, glb00.I3, glb01.I3, S0.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        S0_PIN.D = S1_PIN
+        S0_PIN.C = N_18
+        S0_PIN.R = !SETX
+
+
+GLB glb03, A1
+
+    5 Input(s)
+        (glb04.O2, N_44, I10), (glb03.O2, N_45, I16), (glb02.O0, 
+        S0_PIN, I12), (glb01.O3, S3_QB, I11), (SENS.O, SENSX, I14)
+    3 Output(s)
+        (OR_749, O0), (OR_740, O1), (N_45, O2)
+    6 Product Term(s)
+
+    Output OR_749
+
+        3 Input(s)
+            S3_QB, SENSX, S0_PIN
+        1 Fanout(s)
+            PH4.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        OR_749 = S0_PIN & SENSX
+            # !S3_QB & !SENSX
+
+    Output OR_740
+
+        3 Input(s)
+            S3_QB, SENSX, S0_PIN
+        1 Fanout(s)
+            PH1.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        OR_740 = S0_PIN & !SENSX
+            # !S3_QB & SENSX
+
+    Output N_45
+
+        2 Input(s)
+            N_44, N_45
+        2 Fanout(s)
+            glb03.I16, glb00.I9
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        N_45.D = !N_45
+        N_45.C = N_44
+        N_45.R = 
+
+GLB glb04, A6
+
+    4 Input(s)
+        (glb04.O2, N_44, I16), (glb02.O1, S1_PIN, I13), (glb01.O2, 
+        S2_PIN, I10), (SENS.O, SENSX, I14)
+    3 Output(s)
+        (OR_746, O1), (OR_743, O0), (N_44, O2)
+    5 Product Term(s)
+
+    Output OR_746
+
+        3 Input(s)
+            S1_PIN, SENSX, S2_PIN
+        1 Fanout(s)
+            PH3.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        OR_746 = S1_PIN & SENSX
+            # S2_PIN & !SENSX
+
+    Output OR_743
+
+        3 Input(s)
+            S1_PIN, SENSX, S2_PIN
+        1 Fanout(s)
+            PH2.IR
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        OR_743 = S1_PIN & !SENSX
+            # S2_PIN & SENSX
+
+    Output N_44
+
+        1 Input(s)
+            N_44
+        2 Fanout(s)
+            glb03.I10, glb04.I16
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        N_44.D = !N_44
+        N_44.C = HX
+        N_44.R = 
+
+Clock Input H, Y0
+
+    Output HX
+        1 Fanout(s)
+            glb04.CLK0
+
+
+Output LPH1, IO16
+
+    Input (glb01.O0, PH1_PIN)
+
+    LPH1 = PH1_PIN
+
+
+Output LPH2, IO17
+
+    Input (glb01.O1, PH2_PIN)
+
+    LPH2 = PH2_PIN
+
+
+Output LPH3, IO18
+
+    Input (glb00.O2, PH3_PIN)
+
+    LPH3 = PH3_PIN
+
+
+Output LPH4, IO19
+
+    Input (glb00.O3, PH4_PIN)
+
+    LPH4 = PH4_PIN
+
+
+Output PH1, IO9
+
+    Input (glb03.O1, OR_740)
+
+    PH1 = OR_740
+
+
+Output PH2, IO12
+
+    Input (glb04.O0, OR_743)
+
+    PH2 = OR_743
+
+
+Output PH3, IO13
+
+    Input (glb04.O1, OR_746)
+
+    PH3 = OR_746
+
+
+Output PH4, IO8
+
+    Input (glb03.O0, OR_749)
+
+    PH4 = OR_749
+
+
+Output S0, IO20
+
+    Input (glb02.O0, S0_PIN)
+
+    S0 = S0_PIN
+
+
+Output S1, IO21
+
+    Input (glb02.O1, S1_PIN)
+
+    S1 = S1_PIN
+
+
+Output S2, IO22
+
+    Input (glb01.O2, S2_PIN)
+
+    S2 = S2_PIN
+
+
+Output S3, IO23
+
+    Input (glb01.O3, S3_QB)
+
+    S3 = !S3_QB
+
+
+Input SENS, IO30
+
+    Output SENSX
+        4 Fanout(s)
+            glb03.I14, glb04.I14, glb00.I1, glb01.I1
+
+
+Input SET, IO24
+
+    Output SETX
+        2 Fanout(s)
+            glb01.I7, glb02.I7
+
+
+Clock Assignments
+
+    Net Name		    Clock Assignment
+
+        HX                      External CLK0
+        N_18                    Internal CLK2
+        BUF_736                 Internal CLK1
+
+
+GLB and GLB Output Statistics
+
+    GLB Name, Location      GLB Statistics          GLB Output Statistics
+    GLB Output Name         Ins, Outs, PTs          Ins, FOs, PTs, Levels, PTSABP
+
+        glb00, B0                7,  4,  6          
+            BUF_736                                      1,  1,  1,  1, 1PT 
+            N_18                                         1,  3,  2,  1, -   
+            PH3_PIN                                      3,  1,  2,  1, 4PT 
+            PH4_PIN                                      3,  1,  2,  1, 4PT 
+
+        glb01, B2                6,  4,  7          
+            PH1_PIN                                      3,  1,  2,  1, 4PT 
+            PH2_PIN                                      3,  1,  2,  1, 4PT 
+            S2_PIN                                       2,  5,  1,  1, 1PT 
+            S3_QB                                        2,  4,  1,  1, 1PT 
+
+        glb02, B3                3,  2,  3          
+            S0_PIN                                       2,  4,  1,  1, 1PT 
+            S1_PIN                                       2,  5,  1,  1, 1PT 
+
+        glb03, A1                5,  3,  6          
+            N_45                                         2,  2,  1,  1, 1PT 
+            OR_740                                       3,  1,  2,  1, 4PT 
+            OR_749                                       3,  1,  2,  1, 4PT 
+
+        glb04, A6                4,  3,  5          
+            N_44                                         1,  2,  1,  1, 1PT 
+            OR_743                                       3,  1,  2,  1, 4PT 
+            OR_746                                       3,  1,  2,  1, 4PT 
+
+
+Pin Assignments
+
+    Pin Name                Pin Assignment          Pin Type, Pin Attribute
+
+        SET                     3                       Input, PULLUP
+        SENS                    9                       Input, PULLUP
+        H                       11                      Clock Input, PULLUP
+        PH4                     25                      Output, PULLUP
+        PH1                     26                      Output, PULLUP
+        PH2                     29                      Output, PULLUP
+        PH3                     30                      Output, PULLUP
+        LPH1                    37                      Output, PULLUP
+        LPH2                    38                      Output, PULLUP
+        LPH3                    39                      Output, PULLUP
+        LPH4                    40                      Output, PULLUP
+        S0                      41                      Output, PULLUP
+        S1                      42                      Output, PULLUP
+        S2                      43                      Output, PULLUP
+        S3                      44                      Output, PULLUP
+
+
+Design process management completed successfully

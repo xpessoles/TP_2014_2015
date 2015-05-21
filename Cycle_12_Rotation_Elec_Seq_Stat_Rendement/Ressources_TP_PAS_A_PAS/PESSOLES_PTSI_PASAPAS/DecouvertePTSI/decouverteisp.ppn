@@ -1,0 +1,14 @@
+// 
+// Software Version 8.2
+// Targeted Device : ispLSI1016-60LH44/883
+// Platform : Windows NT 6.1
+// Date : Wed May 20 11:06:07 2015
+// Elapsed Time : 00:00:00
+// 
+                     GND        SYS          1
+                     SW1         IN          3
+                     VCC        SYS         12
+                     GND        SYS         23
+                     VCC        SYS         34
+                   RESET        SYS         35
+                    LED1        OUT         44

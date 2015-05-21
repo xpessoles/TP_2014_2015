@@ -1,0 +1,11 @@
+  TYPE    New_Name       Original_Name
+=========================================
+
+ BLK     UQBNONMCK_99  GLB_I24_U1_$1N14_D0
+ BLK     UQBNONMCK_100  GLB_I24_U1_$1N14
+ BLK     UQBNONMCK_101  GRP_I24_U1_$1N14_grp
+ BLK     UQBNONMCK_102  GRP_I24_U1_$1N14_iomux
+ NET     UQNNONMCK_99  I24_U1_$1N14_iomux
+ NET     UQNNONMCK_100  I24_U1_$1N14
+ NET     UQNNONMCK_101  I24_U1_$1N14_D0
+ NET     UQNNONMCK_102  I24_U1_$1N14_grp

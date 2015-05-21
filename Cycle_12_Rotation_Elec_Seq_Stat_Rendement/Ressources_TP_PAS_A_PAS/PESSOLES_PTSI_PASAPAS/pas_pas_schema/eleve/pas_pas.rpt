@@ -1,0 +1,473 @@
+ispEXPERT Compiler Release 1.8.00.04.29.14, May 20 2002 13:06:40
+
+
+Design Parameters
+-----------------
+
+EFFORT:                         MEDIUM (2)
+IGNORE_FIXED_PIN:               OFF
+MAX_GLB_IN:                     16
+MAX_GLB_OUT:                    4
+OUTPUT_FORM:                    VERILOG, VHDL
+OS_VERSION:                     Windows NT 6.1
+PARAM_FILE:                     'c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\ispxpert'
+PIN_FILE:                       'c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.xpn'
+STRATEGY:                       DELAY
+TIMING_ANALYZER:                ON 
+USE_GLOBAL_RESET:               ON
+
+
+Design Specification
+--------------------
+
+Design:                         pas_pas
+Part:                           ispLSI1016-60LH44/883
+
+
+ISP:                            ON
+ISP_EXCEPT_Y2:                  OFF
+PULL:                           UP
+SECURITY:                       OFF
+Y1_AS_RESET:                    ON
+
+
+Number of Critical Pins:        0
+Number of Free Pins:            0
+Number of Locked Pins:          10
+Number of Reserved Pins:        0
+
+
+Input Pins
+
+    Pin Name                Pin Attribute
+
+        H                       LOCK 11, PULLUP
+        SET                     LOCK 3, PULLUP
+
+
+Output Pins
+
+    Pin Name                Pin Attribute
+
+        PH1                     LOCK 26, PULLUP
+        PH2                     LOCK 29, PULLUP
+        PH3                     LOCK 30, PULLUP
+        PH4                     LOCK 25, PULLUP
+        S0                      LOCK 41, PULLUP
+        S1                      LOCK 42, PULLUP
+        S2                      LOCK 43, PULLUP
+        S3                      LOCK 44, PULLUP
+
+
+Pre-Route Design Statistics
+---------------------------
+
+Number of Macrocells:           12
+Number of GLBs:                 6
+Number of I/Os:                 9
+Number of Nets:                 11
+
+Number of Free Inputs:          0
+Number of Free Outputs:         0
+Number of Free Three-States:    0
+Number of Free Bidi's:          0
+
+Number of Locked Input IOCs:    1
+Number of Locked DIs:           0
+Number of Locked Outputs:       8
+Number of Locked Three-States:  0
+Number of Locked Bidi's:        0
+
+Number of CRIT Outputs:         0
+Number of Global OEs:           0
+Number of External Clocks:      1
+
+
+GLB Utilization (Out of 16):	37%
+I/O Utilization (Out of 33):	27%
+Net Utilization (Out of 97):	11%
+
+
+Nets with Fanout of  1:         4
+Nets with Fanout of  2:         2
+Nets with Fanout of  3:         5
+
+Average Fanout per Net:         2.09
+
+
+GLBs with  1 Input(s):          1
+GLBs with  2 Input(s):          2
+GLBs with  3 Input(s):          2
+GLBs with  5 Input(s):          1
+
+Average Inputs per GLB:         2.67
+
+
+GLBs with  1 Output(s):         2
+GLBs with  2 Output(s):         3
+GLBs with  4 Output(s):         1
+
+Average Outputs per GLB:        2.00
+
+
+Number of GLB Registers:        11
+Number of IOC Registers:        0
+
+
+Post-Route Design Implementation
+--------------------------------
+
+Number of Macrocells:		12
+Number of GLBs:			7
+Number of IOCs:			9
+Number of DIs:			0
+Number of GLB Levels:		1
+
+
+Clock GLB glb00, B0
+
+    2 Input(s)
+        (glb00.O1, I28_Q, I16), (glb04.O2, I31_Q, I9)
+    2 Output(s)
+        (I28_Q, O1), (BUF_716, O0)
+    2 Product Term(s)
+
+    Output I28_Q
+
+        1 Input(s)
+            I28_Q
+        5 Fanout(s)
+            glb02_part1.CLK2, glb03.CLK2, glb02_part2.CLK2, glb00.I16,
+            glb01.CLK2
+        2 Product Term(s)
+        1 GLB Level(s)
+
+        I28_Q.D = (I28_Q)
+            $ VCC
+        I28_Q.C = BUF_716
+        I28_Q.R = 
+    Output BUF_716
+
+        1 Input(s)
+            I31_Q
+        1 Fanout(s)
+            glb00.CLK1
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        BUF_716 = I31_Q
+
+
+GLB glb01, B3
+
+    5 Input(s)
+        (glb02_part2.O0, I24_U1_$1N14, I15), (glb03.O0, I25_Q, I3), 
+        (glb03.O1, I26_Q, I2), (glb02_part1.O1, I27_Q, I6), (SET.O, 
+        SETX, I7)
+    4 Output(s)
+        (DEF_726, O2), (DEF_724, O0), (DEF_722, O1), (DEF_719, O3)
+    5 Product Term(s)
+
+    Output DEF_726
+
+        2 Input(s)
+            SETX, I24_U1_$1N14
+        1 Fanout(s)
+            S2.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        DEF_726.D = !I24_U1_$1N14
+        DEF_726.C = I28_Q
+        DEF_726.R = !SETX
+
+    Output DEF_724
+
+        2 Input(s)
+            SETX, I25_Q
+        1 Fanout(s)
+            S0.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        DEF_724.D = I25_Q
+        DEF_724.C = I28_Q
+        DEF_724.R = !SETX
+
+    Output DEF_722
+
+        2 Input(s)
+            SETX, I27_Q
+        1 Fanout(s)
+            S1.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        DEF_722.D = I27_Q
+        DEF_722.C = I28_Q
+        DEF_722.R = !SETX
+
+    Output DEF_719
+
+        2 Input(s)
+            SETX, I26_Q
+        1 Fanout(s)
+            S3.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        DEF_719.D = !I26_Q
+        DEF_719.C = I28_Q
+        DEF_719.R = !SETX
+
+
+GLB glb02_part1, A2
+
+    2 Input(s)
+        (glb02_part2.O0, I24_U1_$1N14, I0), (SET.O, SETX, I8)
+    1 Output(s)
+        (I27_Q, O1)
+    2 Product Term(s)
+
+    Output I27_Q
+
+        2 Input(s)
+            SETX, I24_U1_$1N14
+        3 Fanout(s)
+            glb03.I9, glb01.I6, PH3.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I27_Q.D = !I24_U1_$1N14
+        I27_Q.C = I28_Q
+        I27_Q.R = !SETX
+
+
+GLB glb02_part2, A4
+
+    2 Input(s)
+        (glb03.O1, I26_Q, I13), (SET.O, SETX, I8)
+    1 Output(s)
+        (I24_U1_$1N14, O0)
+    2 Product Term(s)
+
+    Output I24_U1_$1N14
+
+        2 Input(s)
+            SETX, I26_Q
+        3 Fanout(s)
+            glb02_part1.I0, glb01.I15, PH4.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I24_U1_$1N14.D = !I26_Q
+        I24_U1_$1N14.C = I28_Q
+        I24_U1_$1N14.R = !SETX
+
+
+GLB glb03, A3
+
+    3 Input(s)
+        (glb03.O0, I25_Q, I16), (glb02_part1.O1, I27_Q, I9), (SET.O, 
+        SETX, I8)
+    2 Output(s)
+        (I26_Q, O1), (I25_Q, O0)
+    3 Product Term(s)
+
+    Output I26_Q
+
+        2 Input(s)
+            SETX, I25_Q
+        3 Fanout(s)
+            glb02_part2.I13, glb01.I2, PH1.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I26_Q.D = I25_Q
+        I26_Q.C = I28_Q
+        I26_Q.R = !SETX
+
+    Output I25_Q
+
+        2 Input(s)
+            SETX, I27_Q
+        3 Fanout(s)
+            glb03.I16, glb01.I3, PH2.IR
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I25_Q.D = I27_Q
+        I25_Q.C = I28_Q
+        I25_Q.R = !SETX
+
+
+GLB glb04, A1
+
+    2 Input(s)
+        (glb05.O2, I30_Q, I10), (glb04.O2, I31_Q, I16)
+    1 Output(s)
+        (I31_Q, O2)
+    2 Product Term(s)
+
+    Output I31_Q
+
+        2 Input(s)
+            I31_Q, I30_Q
+        2 Fanout(s)
+            glb04.I16, glb00.I9
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I31_Q.D = !I31_Q
+        I31_Q.C = I30_Q
+        I31_Q.R = 
+
+GLB glb05, A6
+
+    1 Input(s)
+        (glb05.O2, I30_Q, I16)
+    1 Output(s)
+        (I30_Q, O2)
+    1 Product Term(s)
+
+    Output I30_Q
+
+        1 Input(s)
+            I30_Q
+        2 Fanout(s)
+            glb04.I10, glb05.I16
+        1 Product Term(s)
+        1 GLB Level(s)
+
+        I30_Q.D = !I30_Q
+        I30_Q.C = HX
+        I30_Q.R = 
+
+Clock Input H, Y0
+
+    Output HX
+        1 Fanout(s)
+            glb05.CLK0
+
+
+Output PH1, IO9
+
+    Input (glb03.O1, I26_Q)
+
+    PH1 = I26_Q
+
+
+Output PH2, IO12
+
+    Input (glb03.O0, I25_Q)
+
+    PH2 = I25_Q
+
+
+Output PH3, IO13
+
+    Input (glb02_part1.O1, I27_Q)
+
+    PH3 = I27_Q
+
+
+Output PH4, IO8
+
+    Input (glb02_part2.O0, I24_U1_$1N14)
+
+    PH4 = !I24_U1_$1N14
+
+
+Output S0, IO20
+
+    Input (glb01.O0, DEF_724)
+
+    S0 = DEF_724
+
+
+Output S1, IO21
+
+    Input (glb01.O1, DEF_722)
+
+    S1 = DEF_722
+
+
+Output S2, IO22
+
+    Input (glb01.O2, DEF_726)
+
+    S2 = DEF_726
+
+
+Output S3, IO23
+
+    Input (glb01.O3, DEF_719)
+
+    S3 = !DEF_719
+
+
+Input SET, IO24
+
+    Output SETX
+        4 Fanout(s)
+            glb02_part1.I8, glb03.I8, glb02_part2.I8, glb01.I7
+
+
+Clock Assignments
+
+    Net Name		    Clock Assignment
+
+        I28_Q                   Internal CLK2
+        HX                      External CLK0
+        BUF_716                 Internal CLK1
+
+
+GLB and GLB Output Statistics
+
+    GLB Name, Location      GLB Statistics          GLB Output Statistics
+    GLB Output Name         Ins, Outs, PTs          Ins, FOs, PTs, Levels, PTSABP
+
+        glb00, B0                2,  2,  2          
+            BUF_716                                      1,  1,  1,  1, 1PT 
+            I28_Q                                        1,  5,  2,  1, -   
+
+        glb01, B3                5,  4,  5          
+            DEF_719                                      2,  1,  1,  1, 1PT 
+            DEF_722                                      2,  1,  1,  1, 1PT 
+            DEF_724                                      2,  1,  1,  1, 1PT 
+            DEF_726                                      2,  1,  1,  1, 1PT 
+
+        glb02_part1, A2          2,  1,  2          
+            I27_Q                                        2,  3,  1,  1, 1PT 
+
+        glb02_part2, A4          2,  1,  2          
+            I24_U1_$1N14                                 2,  3,  1,  1, 1PT 
+
+        glb03, A3                3,  2,  3          
+            I25_Q                                        2,  3,  1,  1, 1PT 
+            I26_Q                                        2,  3,  1,  1, 1PT 
+
+        glb04, A1                2,  1,  2          
+            I31_Q                                        2,  2,  1,  1, 1PT 
+
+        glb05, A6                1,  1,  1          
+            I30_Q                                        1,  2,  1,  1, 1PT 
+
+
+Pin Assignments
+
+    Pin Name                Pin Assignment          Pin Type, Pin Attribute
+
+        SET                     3                       Input, PULLUP
+        H                       11                      Clock Input, PULLUP
+        PH4                     25                      Output, PULLUP
+        PH1                     26                      Output, PULLUP
+        PH2                     29                      Output, PULLUP
+        PH3                     30                      Output, PULLUP
+        S0                      41                      Output, PULLUP
+        S1                      42                      Output, PULLUP
+        S2                      43                      Output, PULLUP
+        S3                      44                      Output, PULLUP
+
+
+Design process management completed successfully

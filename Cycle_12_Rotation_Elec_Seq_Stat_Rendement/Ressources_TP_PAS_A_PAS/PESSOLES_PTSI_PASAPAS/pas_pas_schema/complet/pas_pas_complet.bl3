@@ -1,0 +1,123 @@
+#$ TOOL ispLEVER 6.1.01.55.12.07.SP2007.01
+#$ DATE Mon May 09 21:47:48 2011
+#$ TITLE principal_complet.bls 
+#$ PROPERTY PLSI LOCK LPH1 37
+#$ PROPERTY PLSI LOCK LPH4 40
+#$ PROPERTY PLSI LOCK LPH3 39
+#$ PROPERTY PLSI LOCK LPH2 38
+#$ PROPERTY PLSI LOCK S0 41
+#$ PROPERTY PLSI LOCK S3 44
+#$ PROPERTY PLSI LOCK S2 43
+#$ PROPERTY PLSI LOCK S1 42
+#$ PROPERTY PLSI LOCK PH1 26
+#$ PROPERTY PLSI LOCK PH4 25
+#$ PROPERTY PLSI LOCK PH3 30
+#$ PROPERTY PLSI LOCK PH2 29
+#$ PROPERTY PLSI LOCK H 11
+#$ PROPERTY PLSI LOCK set 3
+#$ PROPERTY PLSI LOCK sens 9
+#$ MODULE principal_complet
+#$ PINS 15 LPH4'ke,o'  LPH3'ke,o'  LPH2'ke,o'  LPH1'ke,o'  set'ke'  sens'ke'  PH1'ke,o'  PH2'ke,o'  PH3'ke,o'  PH4'ke,o'  H'ke'  S0'ke,o'  S1'ke,o'  S2'ke,o'  S3'ke,o' 
+#$ NODES 3 N_44'o'  N_45'o'  N_18'o' 
+
+.model principal_complet
+.inputs S3.BLIF S0.BLIF S2.BLIF S1.BLIF H.BLIF N_45.BLIF N_44.BLIF N_18.BLIF \
+sens.BLIF set.BLIF
+.outputs N_18.D N_18.C N_44.D N_44.C N_45.D N_45.C S1.REG S1.AR S1.C S0.REG \
+S0.AR S0.C S2.REG S2.AR S2.C S3.PR S3.D S3.C PH4 PH3 PH2 PH1 LPH1 LPH4 LPH3 \
+LPH2
+.names N_18.BLIF N_18.D
+0 1
+1 0
+.names N_45.BLIF N_18.C
+1 1
+0 0
+.names N_44.BLIF N_44.D
+0 1
+1 0
+.names H.BLIF N_44.C
+1 1
+0 0
+.names N_45.BLIF N_45.D
+0 1
+1 0
+.names N_44.BLIF N_45.C
+1 1
+0 0
+.names S2.BLIF S1.REG
+1 1
+0 0
+.names set.BLIF S1.AR
+0 1
+1 0
+.names N_18.BLIF S1.C
+1 1
+0 0
+.names S1.BLIF S0.REG
+1 1
+0 0
+.names set.BLIF S0.AR
+0 1
+1 0
+.names N_18.BLIF S0.C
+1 1
+0 0
+.names S3.BLIF S2.REG
+1 1
+0 0
+.names set.BLIF S2.AR
+0 1
+1 0
+.names N_18.BLIF S2.C
+1 1
+0 0
+.names set.BLIF S3.PR
+0 1
+1 0
+.names S0.BLIF S3.D
+1 1
+0 0
+.names N_18.BLIF S3.C
+1 1
+0 0
+.names S3.BLIF S0.BLIF sens.BLIF PH4
+1-0 1
+-11 1
+0-0 0
+-01 0
+.names S2.BLIF S1.BLIF sens.BLIF PH3
+1-0 1
+-11 1
+0-0 0
+-01 0
+.names S2.BLIF S1.BLIF sens.BLIF PH2
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names S3.BLIF S0.BLIF sens.BLIF PH1
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names S3.BLIF S0.BLIF sens.BLIF LPH1
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names S3.BLIF S0.BLIF sens.BLIF LPH4
+1-0 1
+-11 1
+0-0 0
+-01 0
+.names S2.BLIF S1.BLIF sens.BLIF LPH3
+1-0 1
+-11 1
+0-0 0
+-01 0
+.names S2.BLIF S1.BLIF sens.BLIF LPH2
+-10 1
+1-1 1
+-00 0
+0-1 0
+.end

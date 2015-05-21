@@ -1,0 +1,16 @@
+Tpd Path Report:
+---------------
+
+Design Name: DECOUVERTEISP
+Part Name: ispLSI1016-60LH44/883
+  This report contains the path delays between the
+  primary inputs and primary outputs of the design
+  with no register in the path.
+
+Tpd Paths:
+
+  Source                   Destination              Path Delay
+  (Input)                  (Output)                   [ns]
+==------------------------------------------------------------------------------
+  SW1                      LED1                     22.50 
+==----------------------------------------------------------------------------

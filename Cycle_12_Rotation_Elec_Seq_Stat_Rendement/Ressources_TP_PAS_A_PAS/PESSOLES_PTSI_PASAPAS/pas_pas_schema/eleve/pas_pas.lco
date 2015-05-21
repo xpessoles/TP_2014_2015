@@ -1,0 +1,74 @@
+[DEVICE]
+Family = plsi1k;
+PartNumber = ispLSI1016-60LH44/883;
+PartType = ispLSI1016;
+Package = 44JLCC;
+Speed = 60;
+Operating_condition = COM;
+Default_Device_Io_Types = LVCMOS50,-;
+
+[REVISION]
+RCS = ;
+Parent = lc1k.lci;
+Design = pas_pas;
+DATE = 05/20/2015;
+TIME = 11:43:37;
+Source_Format = ;
+Type = ;
+Pre_Fit_Time = ;
+
+[IGNORE ASSIGNMENTS]
+
+[CLEAR ASSIGNMENTS]
+
+[BACKANNOTATE ASSIGNMENTS]
+
+[GLOBAL CONSTRAINTS]
+Security = Off;
+PULLUP = Up;
+Y1_AS_RESET = On;
+ISP = On;
+ISP_EXCEPT_Y2 = Off;
+
+[FITTER REPORT FORMAT]
+
+[LOCATION ASSIGNMENTS]
+SET = pin, 3, -, -, -;
+H = pin, 11, -, -, -;
+S3 = pin, 44, -, -, -;
+S2 = pin, 43, -, -, -;
+S1 = pin, 42, -, -, -;
+S0 = pin, 41, -, -, -;
+PH4 = pin, 25, -, -, -;
+PH3 = pin, 30, -, -, -;
+PH2 = pin, 29, -, -, -;
+PH1 = pin, 26, -, -, -;
+
+[PULLUP]
+Up = SET, H, S3, S2, S1, S0, PH4, PH3, PH2, PH1; 
+
+[SLEWRATE]
+FAST = S3, S2, S1, S0, PH4, PH3, PH2, PH1; 
+
+[IO TYPES]
+
+[OSM Bypass]
+
+[CLK]
+CLK0 = HX; 
+CLK1 = BUF_716, 
+CLK2 = I28_Q; 
+
+[PTSABYPASS]
+
+[Fitter Results]
+I/O_Pin_Util = 28;
+I/O_Pin = 9;
+Logic_PT_Util = 5;
+Logic_PT = 17;
+Logic_MC_Util = 18;
+Logic_MC = 12;
+Occupied_PT_Util = 3;
+Occupied_PT = 11;
+GLB_input_Util = 5;
+GLB_input = 17;

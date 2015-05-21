@@ -1,0 +1,17 @@
+16 No_Buf Reg_mode
+GLB 0 glb03 -1 -1 3    I25_Q I26_Q -1 -1     NULL
+GLB 1 glb05 -1 -1 6    -1 -1 I30_Q -1     NULL
+GLB 2 glb04 -1 -1 1    -1 -1 I31_Q -1     NULL
+GLB 3 glb02 6 -1 2    -1 I27_Q -1 -1     NULL
+GLB 4 glb01 -1 -1 11    DEF_724 DEF_722 DEF_726 DEF_719     NULL
+GLB 5 glb00 -1 -1 8    BUF_716 I28_Q -1 -1     NULL
+GLB 6 glb02 -1 3 4    I24_U1_$1N14 -1 -1 -1     NULL
+CT_IO Loc_8 PH4
+CT_IO Loc_9 PH1
+CT_IO Loc_12 PH2
+CT_IO Loc_13 PH3
+CT_IO Loc_20 S0
+CT_IO Loc_21 S1
+CT_IO Loc_22 S2
+CT_IO Loc_23 S3
+CT_IO Loc_24 SET

@@ -1,0 +1,23 @@
+1 1.8.00.04.29.14
+-i c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.laf -if laf -p ispLSI1016-60LH44/883 -of vhdl -of verilog -s d -e 2 -z -m 16 -n 4 -ta on -y c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.xpn -r c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\ispxpert.par 
+c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\ispxpert.par 1432111414 Wed May 20 11:43:34 2015
+pas_pas.ppn 1432111417 Wed May 20 11:43:37 2015
+pas_pas.fxp 1432111417 Wed May 20 11:43:37 2015
+c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.laf 1432111414 Wed May 20 11:43:34 2015
+>  c:\users\eleve\desktop\ptsi\pas_pas_schema\eleve\pas_pas.xpn
+// PART: 	ispLSI1016-60LH44/883
+// FORMAT: 	PINNAME		PINTYPE	LOCK	PULLUP	SLOWSLEW	OPENDRAIN	OUTDELAY	VOLTAGE	CRIT
+		H			-		11	-1		-1		-1		-1		-1		-1
+		set			-		3	-1		-1		-1		-1		-1		-1
+		PH1			-		26	-1		-1		-1		-1		-1		-1
+		PH2			-		29	-1		-1		-1		-1		-1		-1
+		PH3			-		30	-1		-1		-1		-1		-1		-1
+		PH4			-		25	-1		-1		-1		-1		-1		-1
+		S0			-		41	-1		-1		-1		-1		-1		-1
+		S1			-		42	-1		-1		-1		-1		-1		-1
+		S2			-		43	-1		-1		-1		-1		-1		-1
+		S3			-		44	-1		-1		-1		-1		-1		-1
+
+// FORMAT: 	NETNAME		CLK		PRESERVE	ECP	GROUP		XOR	ELP	ETP
+
+// FORMAT: 	SYMNAME		PROTECT	REGTYPE

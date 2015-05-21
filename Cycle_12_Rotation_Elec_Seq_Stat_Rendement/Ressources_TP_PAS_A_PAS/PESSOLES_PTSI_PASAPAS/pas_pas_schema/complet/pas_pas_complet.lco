@@ -1,0 +1,80 @@
+[DEVICE]
+Family = plsi1k;
+PartNumber = ispLSI1016-60LH44/883;
+PartType = ispLSI1016;
+Package = 44JLCC;
+Speed = 60;
+Operating_condition = COM;
+Default_Device_Io_Types = LVCMOS50,-;
+
+[REVISION]
+RCS = ;
+Parent = lc1k.lci;
+Design = pas_pas_complet;
+DATE = 05/09/2011;
+TIME = 21:47:54;
+Source_Format = ;
+Type = ;
+Pre_Fit_Time = ;
+
+[IGNORE ASSIGNMENTS]
+
+[CLEAR ASSIGNMENTS]
+
+[BACKANNOTATE ASSIGNMENTS]
+
+[GLOBAL CONSTRAINTS]
+Security = Off;
+PULLUP = Up;
+Y1_AS_RESET = On;
+ISP = On;
+ISP_EXCEPT_Y2 = Off;
+
+[FITTER REPORT FORMAT]
+
+[LOCATION ASSIGNMENTS]
+SET = pin, 3, -, -, -;
+SENS = pin, 9, -, -, -;
+H = pin, 11, -, -, -;
+S3 = pin, 44, -, -, -;
+S2 = pin, 43, -, -, -;
+S1 = pin, 42, -, -, -;
+S0 = pin, 41, -, -, -;
+PH4 = pin, 25, -, -, -;
+PH3 = pin, 30, -, -, -;
+PH2 = pin, 29, -, -, -;
+PH1 = pin, 26, -, -, -;
+LPH4 = pin, 40, -, -, -;
+LPH3 = pin, 39, -, -, -;
+LPH2 = pin, 38, -, -, -;
+LPH1 = pin, 37, -, -, -;
+
+[PULLUP]
+Up = SET, SENS, H, S3, S2, S1, S0, PH4, PH3, PH2, PH1, LPH4, LPH3, LPH2, LPH1; 
+
+[SLEWRATE]
+FAST = S3, S2, S1, S0, PH4, PH3, PH2, PH1, LPH4, LPH3, LPH2, LPH1; 
+
+[IO TYPES]
+
+[OSM Bypass]
+
+[CLK]
+CLK0 = HX; 
+CLK1 = BUF_736, 
+CLK2 = N_18; 
+
+[PTSABYPASS]
+Bypass = PH3_PIN, PH4_PIN, PH1_PIN, PH2_PIN, OR_740, OR_749, OR_743, OR_746; 
+
+[Fitter Results]
+I/O_Pin_Util = 43;
+I/O_Pin = 14;
+Logic_PT_Util = 8;
+Logic_PT = 27;
+Logic_MC_Util = 25;
+Logic_MC = 16;
+Occupied_PT_Util = 12;
+Occupied_PT = 39;
+GLB_input_Util = 8;
+GLB_input = 25;
